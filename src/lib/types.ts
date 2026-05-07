@@ -21,6 +21,8 @@ export type PainPoint = {
   label: string;
   intensity: number;
   sources: { client: number; reviews: number; reddit: number; forums: number };
+  topPhrases?: { text: string; count: number }[];
+  citations?: { url: string; snippet: string }[];
 };
 
 export type Keyword = {

@@ -2,7 +2,7 @@
 
 > Client-URL → marketing-angle report template. Built for digital marketing agencies who need to produce repeatable, multi-viz "what-should-we-test" reports for new clients in any vertical.
 
-**Live demo:** *(link added after first deploy)*
+**Live demo:** **https://alexomni-123.github.io/omni-report-template/**
 
 ## What it does
 
@@ -37,6 +37,22 @@ bun run dev
 
 Then visit `http://localhost:3000`.
 
+## Generate real data (optional)
+
+Replace the fabricated sample with real customer phrases scraped from Reddit, HardwareZone, Renotalk, Google Maps, and Carousell:
+
+```bash
+cd scraper
+bun install
+bunx playwright install chromium     # one-time, ~150 MB
+bun run scrape:all                    # full scrape, ~30–60 min
+# or for a quick demo:
+bun src/run-reddit.ts demo-sg-config.yaml   # ~12 min
+bun run build-report
+```
+
+Output writes to `src/data/scraped/window-sg.json` — the page banner flips from amber "Sample data" to green "Real data" automatically. See `scraper/README.md` for the full pipeline.
+
 ## Customize
 
 - **Replace the report data**: edit `src/data/sample.ts`. The `Report` type is defined in `src/lib/types.ts`.
@@ -45,13 +61,19 @@ Then visit `http://localhost:3000`.
 
 ## Deploy
 
-This is a vanilla Next.js app — deploys to Vercel with zero configuration:
+The repo is pre-wired for **GitHub Pages** via Actions — every push to `main` rebuilds and redeploys automatically. The workflow is at `.github/workflows/deploy.yml`. To enable on a fork:
+
+```bash
+gh api -X POST repos/<your-user>/<your-fork>/pages -f build_type=workflow
+```
+
+Or, for **Vercel**, this is also a vanilla Next.js app:
 
 ```bash
 vercel deploy --prod
 ```
 
-Or import the repo at [vercel.com/new](https://vercel.com/new).
+Note: when deploying to Vercel (or any custom domain), unset `GITHUB_PAGES=1` so the basePath isn't applied — Vercel serves at the domain root.
 
 ## Generated with
 

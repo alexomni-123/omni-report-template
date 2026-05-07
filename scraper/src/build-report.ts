@@ -31,11 +31,13 @@ async function loadRawComments(rawDir: string): Promise<RawComment[]> {
     console.warn(`! raw dir not found: ${rawDir} — run a scrape first`);
     return [];
   }
-  const files = (await readdir(rawDir)).filter((f) => f.endsWith(".json"));
+  const files = (await readdir(rawDir)).filter(
+    (f) => f.endsWith(".json") && !f.startsWith("_")
+  );
   const all: RawComment[] = [];
   for (const f of files) {
-    const c = JSON.parse(await readFile(join(rawDir, f), "utf8")) as RawComment[];
-    all.push(...c);
+    const parsed = JSON.parse(await readFile(join(rawDir, f), "utf8"));
+    if (Array.isArray(parsed)) all.push(...(parsed as RawComment[]));
   }
   return all;
 }
@@ -107,11 +109,23 @@ async function main() {
   const cfg = await loadConfig(cfgPath);
 
   const rawDir = cfg.output.rawPath;
-  const comments = await loadRawComments(rawDir);
-  console.log(`build-report: ${comments.length} comments loaded from ${rawDir}`);
+  const all = await loadRawComments(rawDir);
+  console.log(`build-report: ${all.length} comments loaded from ${rawDir}`);
+
+  // Topic filter: Reddit's relevance ranking sometimes returns popular off-topic
+  // threads when the query has no strong match. Drop comments whose thread title
+  // doesn't mention any window-related vocabulary.
+  const topicRe =
+    /\b(window|casement|sliding|glaz|seepage|leak|aircon|aluminum|aluminium|upvc|frame|hdb\s*reno|reno(vation)?|noise|insulat|sound[- ]?proof|rain|monsoon|mou?ld|condensation)\b/i;
+  const comments = all.filter((c) => {
+    const title = c.context?.threadTitle ?? "";
+    if (!title) return true; // keep if no title metadata (defensive)
+    return topicRe.test(title) || topicRe.test(c.body);
+  });
+  console.log(`build-report: ${comments.length} on-topic comments after filter`);
 
   if (comments.length === 0) {
-    console.log("! no comments to process — skipping report build");
+    console.log("! no on-topic comments — skipping report build");
     return;
   }
 

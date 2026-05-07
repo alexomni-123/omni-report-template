@@ -1,11 +1,470 @@
 {
-  "isRealData": false,
-  "note": "Stub — overwritten by `cd scraper && bun run scrape:all && bun run build-report` with real customer-language data scraped from Reddit, HardwareZone, Renotalk, Google Maps, and Carousell. While this stub is in place, the page renders the fabricated sample data from src/data/sample.ts.",
-  "sourceTotals": {},
-  "painPoints": [],
-  "keywords": [],
-  "competitors": [],
+  "generatedAt": "2026-05-07",
+  "generatedBy": "OMNI BRAIN Oracle (real-data scrape)",
+  "isRealData": true,
+  "sourceTotals": {
+    "reddit": 1452
+  },
+  "snapshot": {
+    "vertical": "HDB & Condo Window Replacement",
+    "serviceArea": "Singapore (island-wide, HDB-towns priority)",
+    "websiteUrl": "https://example-windows.sg",
+    "businessModel": "—",
+    "priceBand": "—",
+    "headline": "—"
+  },
+  "painPoints": [
+    {
+      "id": "heat",
+      "label": "Heat gain / soaring aircon bills",
+      "intensity": 100,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 185,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "the aircon",
+          "count": 21
+        },
+        {
+          "text": "air con",
+          "count": 20
+        },
+        {
+          "text": "without aircon",
+          "count": 10
+        },
+        {
+          "text": "electricity bill",
+          "count": 9
+        },
+        {
+          "text": "air con,",
+          "count": 8
+        },
+        {
+          "text": "casement aircon",
+          "count": 8
+        },
+        {
+          "text": "my aircon",
+          "count": 7
+        },
+        {
+          "text": "bedroom aircon",
+          "count": 7
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/1l4ntoz/empty_shops_boarded_windows_has_holland_village/mwb8p3y/",
+          "snippet": "Besides the sad story, I must say this journalist did a comprehensive article on Holland Village including its origin. Clearly a lot of time on research and interviewing past and present tenant. \n\nI h…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/fpxxrz/why_do_hdb_windows_look_so_ugly/flnkis5/",
+          "snippet": "Ugly in what sense? Also, our windows are kinda similar to Hong Kong's high-rise apartments, so don't be quick to say \"other countries have better windows\".\n\nI guess it's a combination of things like …"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/my5hvb/a_brand_new_electricbus_for_singapore_the_byd/gvt2021/",
+          "snippet": "early 2000s: guys bus windows are obsolete lets remove it and install aircon\n\nearly 2020s: fuck go back go back"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/my5hvb/a_brand_new_electricbus_for_singapore_the_byd/gvtutss/",
+          "snippet": "Remember days riding on bus in hot sun / heavy rain with no aircon and parents picking no aircon bus because it’s cheaper can save few cents."
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/my5hvb/a_brand_new_electricbus_for_singapore_the_byd/gvu0x5w/",
+          "snippet": "Taking an Aircon bus was a luxury."
+        }
+      ]
+    },
+    {
+      "id": "seepage",
+      "label": "Monsoon water seepage at frame / sill",
+      "intensity": 78,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 58,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "water seepage",
+          "count": 26
+        },
+        {
+          "text": "seepage from",
+          "count": 5
+        },
+        {
+          "text": "water seepage from",
+          "count": 3
+        },
+        {
+          "text": "a leak",
+          "count": 3
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/1kc2iwy/new_hip_laundry_racks_proudly_highlighted_on_east/mpzj1ih/",
+          "snippet": "Right. I had to add all sorts of makeshift panels in my kitchen window because otherwise the splashing water will wet half my kitchen floor even when the rain is not heavy. After a while I gave up and…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/l51rc1o/",
+          "snippet": "Bro u change abit. U make it instead of detect smoke, u detect RAIN. Smart window auto close during rain.\n\nMany more ppl will buy from u."
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/l54r33c/",
+          "snippet": "Have the automatic system activate a water hose pointed straight at smoker's window and we're in business"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/l55s5po/",
+          "snippet": "I will be honest with you. It wont make commercial sense for cigarette smoke. Just like rain, occupants will just close the window at the sign. They never desired an automatic rain detection and windo…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/10yemvm/newly_renoed_flat_waterproofing_leaking/",
+          "snippet": "Newly reno-ed flat waterproofing leaking, contractor MIA - options?\n\n[Repost](https://www.reddit.com/r/singapore/comments/10yd4gt/newly_renoed_flat_waterproofing_leaking/) but with name and mobile num…"
+        }
+      ]
+    },
+    {
+      "id": "mold",
+      "label": "Humidity + mold around frames",
+      "intensity": 66,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 31,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "the humidity",
+          "count": 3
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/1kc2iwy/new_hip_laundry_racks_proudly_highlighted_on_east/mriun7y/",
+          "snippet": "I would prefer a yard or balcony with shelter where I can place my laundry drying rack or bamboo poles.\n\nIn Sg's hot and humid and unpredictable weather, the hot wind will dry the clothes. The shelter…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/l531zuk/",
+          "snippet": "How about adjacent neighbour blasting aircon? My wall all got mouldy because of it. My bags are full of mold."
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/1swsnam/the_heat_has_been_rough_in_sg_lately/oiicxad/",
+          "snippet": "The humidity is no joke 😅 This is exactly why wooden kitchen cabinets in SG are a nightmare — they absorb moisture and start warping after a few years. Aluminium doesn't have this problem at all. Slo…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/gh1d5c/is_it_just_me_or_was_today_disgustingly_hot/",
+          "snippet": "is it just me or was today disgustingly hot?\n\nfrom living room to study room to bedroom every inch of the house is so hot, 5 mins outside to walk to ntuc left me sweating. In the morning the aircon wa…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/gh1d5c/is_it_just_me_or_was_today_disgustingly_hot/fq8bhch/",
+          "snippet": "It’s awesome that we have rain again this morning but I fear the rest of the day is gonna be humid as hell."
+        }
+      ]
+    },
+    {
+      "id": "noise",
+      "label": "MRT / road / aircon-compressor noise",
+      "intensity": 64,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 27,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "sound proofing",
+          "count": 4
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/",
+          "snippet": "A small proof of concept to stop cigarette smoke from your neighbours\n\nIf you stay in an apartment and your neighbour smokes, some of that cigarette smoke may find its way into your house. This is not…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/gh1d5c/is_it_just_me_or_was_today_disgustingly_hot/fq8b5ju/",
+          "snippet": "I am just your average HDB 4-room flat dweller. The electrical bill is not that bad really.\n\nI have the aircon on most of the time even before CB and my average monthly bill from Geneco is about $110-…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/",
+          "snippet": "Anyone staying near expressway or MRT track? Are you ok with the noise? How do you deal with it?\n\nI am looking to buy a house on 4th floor which happened to be near an expressway.\n\nI can hear the traf…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm4z5ph/",
+          "snippet": "I don’t live beside an expressway or MRT track, but a main road. It’s one of the major roads so there’s lots of noise if I open the window, even at night.\n\nTo counter the noise coming from the main ro…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm8bh6y/",
+          "snippet": "1. Expressway  \n2. 11th  \n3.  See 4.\n4. Got used to it. I have a MSCP blocking direct line of sight to the expressway from my place (higher than the MSCP rooftop, but low enough to be blocked), so dai…"
+        }
+      ]
+    },
+    {
+      "id": "disruption",
+      "label": "Mess + disruption (kids, elderly, WFH)",
+      "intensity": 52,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 14,
+        "forums": 0
+      },
+      "topPhrases": [],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/1cmxb1v/is_it_time_to_consider_aircon_for_b2c_wards/l33g0n7/",
+          "snippet": "The cost of running an AC ward is not that much different than running a non AC ward. You still need the same nurses and doctors. Slight increase in cooling cost but it makes up for it with the dust f…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm65bcw/",
+          "snippet": "I rented a place near the expressway before and I hated it. I stayed at the 7th floor. If the noise doesn't drive you crazy at night the dust will. It is exceptionally dirty and dusty so your windows …"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm6tt2t/",
+          "snippet": "Have to also take into consideration the amount of dust and other pollutants that would enter your balcony or home if you keep the windows open for ventilation."
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm6z20t/",
+          "snippet": "The place I'm currently living is facing the expressway but I live on the lower floor so it's not as bad those living on the higher floors as there are trees that acts as a noise barrier and also nois…"
+        },
+        {
+          "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm74j98/",
+          "snippet": "Ya u will get used to the noise. Lots of dust though but it's livable"
+        }
+      ]
+    },
+    {
+      "id": "trust",
+      "label": "Contractor trust / vanishing-warranty fear",
+      "intensity": 34,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 5,
+        "forums": 0
+      },
+      "topPhrases": [],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/singapore/comments/10yemvm/newly_renoed_flat_waterproofing_leaking/",
+          "snippet": "Newly reno-ed flat waterproofing leaking, contractor MIA - options?\n\n[Repost](https://www.reddit.com/r/singapore/comments/10yd4gt/newly_renoed_flat_waterproofing_leaking/) but with name and mobile num…"
+        },
+        {
+          "url": "https://reddit.com/r/askSingapore/comments/1p72dng/how_do_you_deal_with_the_uwu_bird_right_outside/nqv4ct0/",
+          "snippet": "I second this because it really works. I put a Bluetooth speaker near my window facing out and downloaded a uwu bird call from a nature website. Every time the resident koel started uwu-ing at 6am, I …"
+        },
+        {
+          "url": "https://reddit.com/r/askSingapore/comments/1p72dng/how_do_you_deal_with_the_uwu_bird_right_outside/nqunj7j/",
+          "snippet": "My partner did this and the bird never came back"
+        },
+        {
+          "url": "https://reddit.com/r/askSingapore/comments/1n09wdi/serious_how_does_a_flying_cockroach_fly_out_of_my/napaauh/",
+          "snippet": "You should definitely try those roach killers that they sell online. They look like mini hockey pucks and come in packs of 6-8. Scatter them around your apartment — including one right outside your be…"
+        },
+        {
+          "url": "https://reddit.com/r/askSingapore/comments/1n09wdi/serious_how_does_a_flying_cockroach_fly_out_of_my/napn1pw/",
+          "snippet": "I kena before infestation got those pest control it worked and never came back after 2-3weeks. They will recommend where to use those foam spray to fully block drains like kitchen sink or toilet drain…"
+        }
+      ]
+    },
+    {
+      "id": "hdb-approval",
+      "label": "HDB approval / BCA paperwork anxiety",
+      "intensity": 0,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 0,
+        "forums": 0
+      },
+      "topPhrases": [],
+      "citations": []
+    },
+    {
+      "id": "cost",
+      "label": "Hidden cost / opaque quotes (debris, hoist, GST)",
+      "intensity": 0,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 0,
+        "forums": 0
+      },
+      "topPhrases": [],
+      "citations": []
+    }
+  ],
+  "keywords": [
+    {
+      "phrase": "the noise",
+      "monthlyVolume": 45,
+      "stage": "solution"
+    },
+    {
+      "phrase": "water seepage",
+      "monthlyVolume": 26,
+      "stage": "problem"
+    },
+    {
+      "phrase": "the window",
+      "monthlyVolume": 25,
+      "stage": "solution"
+    },
+    {
+      "phrase": "living room",
+      "monthlyVolume": 25,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the aircon",
+      "monthlyVolume": 21,
+      "stage": "solution"
+    },
+    {
+      "phrase": "noise pollution",
+      "monthlyVolume": 21,
+      "stage": "solution"
+    },
+    {
+      "phrase": "air con",
+      "monthlyVolume": 20,
+      "stage": "solution"
+    },
+    {
+      "phrase": "cigarette smoke",
+      "monthlyVolume": 19,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the windows",
+      "monthlyVolume": 19,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the water",
+      "monthlyVolume": 15,
+      "stage": "solution"
+    },
+    {
+      "phrase": "more than",
+      "monthlyVolume": 13,
+      "stage": "solution"
+    },
+    {
+      "phrase": "mrt track",
+      "monthlyVolume": 13,
+      "stage": "solution"
+    },
+    {
+      "phrase": "away from",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "my house",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "don't know",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "next time",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "water bed",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "better than",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the window.",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "sbs transit",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "double decker",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "bus service",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "even though",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "window seat",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "many people",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the noise.",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "casement windows",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "decker buses",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the house",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "the noise,",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    }
+  ],
   "angles": [],
+  "competitors": [],
   "copyHooks": [],
-  "testPlan": []
+  "testPlan": [],
+  "icp": {
+    "ageBuckets": [],
+    "homeTypes": [],
+    "urgency": [],
+    "oneLine": "Awaiting human triangulation against ad-platform demographics."
+  }
 }

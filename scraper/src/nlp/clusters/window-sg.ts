@@ -18,8 +18,13 @@ export const windowSgClusters: PainCluster[] = [
     id: "heat",
     label: "Heat gain / soaring aircon bills",
     matchers: [
-      /\b(aircon|air[\s-]?con|cooling|heat(\s*gain)?|hot|west[\s-]?facing|afternoon\s*sun|sp\s*bill|electricity\s*bill)\b/i,
-      /low[\s-]?e\s*glass|tinted?\s*window|solar\s*film/i,
+      // Require explicit aircon/cooling/heating-bill terms (no bare "hot" — that hits noise like "hot and pretty")
+      /\b(aircon|air[\s-]?con|aircond?ition\w*)\b/i,
+      /\b(electricity|sp|utility|utilities)\s*bill\b/i,
+      /\b(west[\s-]?facing|afternoon\s*sun|sun[\s-]?facing|heat\s*(gain|trap|build[\s-]?up))\b/i,
+      /\bhot\b.*\b(window|room|bedroom|flat|unit|hdb|condo|aircon|sun)\b/i,
+      /\b(window|room|bedroom|flat|unit|hdb|condo|aircon|sun)\b.*\bhot\b/i,
+      /low[\s-]?e\s*glass|tinted?\s*window|solar\s*film|window\s*tint/i,
     ],
   },
   {
