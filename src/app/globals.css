@@ -50,3 +50,54 @@ body {
   border: 1px solid var(--card-border);
   border-radius: 0.75rem;
 }
+
+@media print {
+  :root {
+    --background: #ffffff;
+    --foreground: #111827;
+    --card: #ffffff;
+    --card-border: #d1d5db;
+    --muted: #4b5563;
+    --accent: #ea580c;
+    --accent-soft: #fef3e7;
+  }
+  body {
+    font-size: 10pt;
+    background: #ffffff !important;
+  }
+  main {
+    max-width: none !important;
+    padding: 0.4in 0.5in !important;
+  }
+  /* break sections cleanly to avoid mid-section page splits */
+  section.report-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    border: 1px solid #d1d5db !important;
+    background: #fff !important;
+  }
+  /* hide interactive-only controls (none today, but future-proof) */
+  .no-print {
+    display: none !important;
+  }
+  /* SVG charts often overflow on print — constrain */
+  .recharts-wrapper {
+    max-width: 100% !important;
+  }
+  /* Don't break bullet lists awkwardly */
+  ol li,
+  ul li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Footnote URLs after links */
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #6b7280;
+    word-break: break-all;
+  }
+  a[href^="#"]::after {
+    content: "";
+  }
+}

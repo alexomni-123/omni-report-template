@@ -1,4 +1,5 @@
 import type { Snapshot } from "@/lib/types";
+import { PrintButton } from "@/components/PrintButton";
 
 type Props = {
   generatedAt: string;
@@ -21,9 +22,10 @@ export function ReportHeader({ generatedAt, generatedBy, snapshot }: Props) {
             {snapshot.serviceArea} · <a href={snapshot.websiteUrl} className="underline decoration-dotted underline-offset-4">{snapshot.websiteUrl}</a>
           </p>
         </div>
-        <div className="text-right text-xs text-[color:var(--muted)] font-mono">
+        <div className="flex flex-col items-end gap-2 text-right text-xs text-[color:var(--muted)] font-mono">
+          <PrintButton />
           <p>Generated {generatedAt}</p>
-          <p className="mt-1">[Generated with {generatedBy}]</p>
+          <p>[Generated with {generatedBy}]</p>
         </div>
       </div>
     </header>
