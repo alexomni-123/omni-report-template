@@ -467,6 +467,22 @@ export const synthesizedTestPlan: TestPlanCreative[] = [
       "Open with the CNA $100k Sengkang seepage story. Walk through the 5 warranty clauses that vanish first when contractors close. Lead magnet: 'The Singapore Window-Contractor Background Check (UEN, BCA, complaint history) — 1-page PDF.'",
     cta: "Send me the contractor check-list →",
     rationale:
-      "High-intent retargeting layer for cold traffic from #1 and #2. Ready-to-quote audience comparing 3 vendors will respond to honesty over promotion. Builds trust → conversion.",
+      "High-intent retargeting layer for cold traffic from #1 and #2. Ready-to-quote audience comparing 3 vendors will respond to honesty over promotion. Builds trust → conversion. Target CPL S$15–20 (highest-intent audience of the three plans).",
   },
 ];
+
+/**
+ * SG Meta Ads benchmarks (2026, home-improvement / lead-gen vertical).
+ * Sourced via WebSearch from PaperCutSG / Enrich Labs / AdAmigo / OwlClaw on
+ * 2026-05-07. Use for budget calibration in §8 Test Plan and as Day-1
+ * guardrails for the Performance Analyst.
+ */
+export const sgMetaBenchmarks = {
+  goodCPL: "S$20–25 per qualified lead",
+  badCPL: "above S$35 → kill the creative",
+  cpmGuardrail: "above S$25 CPM for broad consumer = overpaying",
+  ctrTarget: "2.0% (2026 home-improvement projection — was 1.94% in 2025)",
+  exampleEcon:
+    "S$2,000/mo budget = ~80 qualified leads in SG renovation industry at S$25 CPL",
+  source: "PaperCutSG / Enrich Labs / AdAmigo / OwlClaw — Meta benchmarks reports, 2026",
+};
