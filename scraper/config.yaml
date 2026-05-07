@@ -1,0 +1,92 @@
+# Declarative scrape targets. Edit this file → re-run `bun run scrape:all` → new report data.
+
+clientName: "Example Windows SG"
+clientWebsite: "https://example-windows.sg"
+serviceArea: "Singapore (island-wide, HDB-towns priority)"
+vertical: "HDB & Condo Window Replacement"
+
+# Subreddits to crawl (Reddit .json endpoints — no API key needed)
+reddit:
+  subreddits:
+    - singapore
+    - askSingapore
+    - SingaporeRaw
+    - HDB
+    - RealEstateSingapore
+  queries:
+    - window
+    - casement
+    - sliding window
+    - aircon bill
+    - window seepage
+    - mrt noise
+    - soundproof window
+    - hdb permit
+    - bca contractor
+    - low e glass
+    - laminated glass
+    - water seepage rain
+  maxPostsPerQuery: 25
+  commentDepth: 2
+
+# Forums (HTML scrape, no JS required → cheerio)
+forums:
+  hardwarezone:
+    base: "https://forums.hardwarezone.com.sg/forums/eat-drink-man-woman.16/"
+    queries:
+      - window
+      - casement
+      - HDB renovation
+    maxPostsPerQuery: 20
+  renotalk:
+    base: "https://www.renotalk.com/forum/"
+    queries:
+      - window
+      - casement
+      - aluminum window
+      - soundproof
+    maxPostsPerQuery: 20
+
+# Google Maps (Playwright + stealth) — businesses to pull reviews for
+googleMaps:
+  businesses:
+    - "Example Windows SG Singapore"
+    # add competitor names as they appear on Google Maps
+  reviewsPerBusiness: 50
+
+# Carousell (Playwright + stealth) — buyer/seller comments
+carousell:
+  searchTerms:
+    - "hdb window"
+    - "casement window"
+  maxListings: 30
+
+# NLP phrase extraction settings
+nlp:
+  minPhraseLength: 2
+  maxPhraseLength: 5
+  minOccurrences: 3
+  stopwords:
+    - the
+    - and
+    - for
+    - with
+    - this
+    - that
+    - have
+    - was
+    - just
+    - but
+    - not
+    - all
+    - get
+    - can
+    - one
+    - really
+    - some
+    - very
+
+# Output
+output:
+  reportPath: "../src/data/scraped/window-sg.json"
+  rawPath: "./output/raw/"

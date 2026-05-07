@@ -1,0 +1,21 @@
+{
+  "name": "omni-report-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-automation + JSON-endpoint scrapers feeding the OMNI report template with real customer-language data",
+  "scripts": {
+    "scrape:reddit": "bun src/run-reddit.ts",
+    "scrape:all": "bun src/run-all.ts",
+    "build-report": "bun src/build-report.ts",
+    "install-browsers": "bunx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "cheerio": "^1.0.0",
+    "compromise": "^14.14.4",
+    "yaml": "^2.6.0"
+  }
+}

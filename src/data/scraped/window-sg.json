@@ -1,0 +1,11 @@
+{
+  "isRealData": false,
+  "note": "Stub — overwritten by `cd scraper && bun run scrape:all && bun run build-report` with real customer-language data scraped from Reddit, HardwareZone, Renotalk, Google Maps, and Carousell. While this stub is in place, the page renders the fabricated sample data from src/data/sample.ts.",
+  "sourceTotals": {},
+  "painPoints": [],
+  "keywords": [],
+  "competitors": [],
+  "angles": [],
+  "copyHooks": [],
+  "testPlan": []
+}

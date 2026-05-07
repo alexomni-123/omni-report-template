@@ -1,4 +1,4 @@
-import { sampleReport } from "@/data/sample";
+import { report } from "@/data/load-report";
 import { ReportHeader } from "@/components/ReportHeader";
 import { Section1Snapshot } from "@/components/sections/Section1Snapshot";
 import { Section2ICP } from "@/components/sections/Section2ICP";
@@ -10,10 +10,33 @@ import { Section7CopyHooks } from "@/components/sections/Section7CopyHooks";
 import { Section8TestPlan } from "@/components/sections/Section8TestPlan";
 
 export default function Home() {
-  const r = sampleReport;
+  const r = report;
+  const realCount = Object.values(r.sourceTotals).reduce((s, n) => s + n, 0);
   return (
     <main className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
       <ReportHeader generatedAt={r.generatedAt} generatedBy={r.generatedBy} snapshot={r.snapshot} />
+
+      {r.isRealData ? (
+        <div className="mb-8 rounded-lg border border-emerald-300/40 bg-emerald-50 dark:bg-emerald-900/20 px-4 py-3 text-sm">
+          <span className="font-mono uppercase tracking-wide text-[11px] text-emerald-700 dark:text-emerald-400">Real data</span>
+          {" — "}
+          Pain points + keyword phrases below are extracted from {realCount.toLocaleString()} scraped customer messages
+          {Object.entries(r.sourceTotals).length > 0 && (
+            <span className="text-[color:var(--muted)]">
+              {" ("}
+              {Object.entries(r.sourceTotals).map(([s, n]) => `${s}: ${n}`).join(", ")}
+              {")"}
+            </span>
+          )}
+          . Other sections still use curated sample data.
+        </div>
+      ) : (
+        <div className="mb-8 rounded-lg border border-amber-300/40 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 text-sm">
+          <span className="font-mono uppercase tracking-wide text-[11px] text-amber-700 dark:text-amber-500">Sample data</span>
+          {" — "}
+          Run <code className="font-mono">cd scraper &amp;&amp; bun run scrape:all &amp;&amp; bun run build-report</code> to replace pain points and keywords with real customer language from Reddit, forums, and Google Maps.
+        </div>
+      )}
 
       <div className="space-y-6">
         <Section1Snapshot snapshot={r.snapshot} />
