@@ -13,6 +13,7 @@ import {
   synthesizedPressContext,
   synthesizedSnapshot,
   synthesizedTestPlan,
+  sgMetaBenchmarks,
   type Evidence,
 } from "./synthesis";
 
@@ -78,4 +79,5 @@ export const report = {
   competitorGap: synthesizedCompetitorGap,
   googleSuggest: suggestRaw as { seed: string; suggestions: string[] }[],
   pressContext: synthesizedPressContext,
+  sgMetaBenchmarks,
 };
