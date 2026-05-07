@@ -11,9 +11,10 @@ import {
 } from "recharts";
 import { SectionShell } from "@/components/SectionShell";
 import type { PainPoint } from "@/lib/types";
-import { Flame, Snowflake } from "lucide-react";
+import { Flame, Snowflake, Newspaper } from "lucide-react";
 
-type Props = { painPoints: PainPoint[] };
+type PressItem = { headline: string; outlet: string; date?: string; url: string; takeaway: string };
+type Props = { painPoints: PainPoint[]; press?: PressItem[] };
 
 function temperatureBadge(avgNeg?: number) {
   if (avgNeg === undefined || avgNeg === null) return null;
@@ -46,7 +47,7 @@ function intensityColor(v: number) {
   return "#84cc16";
 }
 
-export function Section3PainPoints({ painPoints }: Props) {
+export function Section3PainPoints({ painPoints, press }: Props) {
   const sorted = [...painPoints].sort((a, b) => b.intensity - a.intensity);
 
   return (
@@ -122,6 +123,36 @@ export function Section3PainPoints({ painPoints }: Props) {
         Heat-related complaints are <em>frequent</em> on Reddit but customers have resigned to it (low neg-word density). Seepage and contractor-trust pains are
         <em> hotter</em> — they still anger customers — and convert better.
       </p>
+
+      {press && press.length > 0 && (
+        <div className="mt-8 report-card p-4 border-l-4" style={{ borderLeftColor: "var(--accent)" }}>
+          <div className="flex items-baseline gap-2 mb-3">
+            <Newspaper className="h-4 w-4 text-[color:var(--accent)]" />
+            <h3 className="text-sm font-semibold tracking-tight">Published press &amp; policy context</h3>
+          </div>
+          <ul className="space-y-3">
+            {press.map((p, i) => (
+              <li key={i} className="text-sm">
+                <a
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="font-medium leading-snug text-[color:var(--accent)] underline decoration-dotted underline-offset-4"
+                >
+                  &ldquo;{p.headline}&rdquo;
+                </a>
+                <span className="text-[color:var(--muted)] font-mono text-[11px] uppercase tracking-wide ml-2">
+                  {p.outlet}{p.date ? ` · ${p.date}` : ""}
+                </span>
+                <p className="mt-1 leading-snug text-[color:var(--foreground)]/80">
+                  <span className="text-[color:var(--muted)] font-mono text-[10px] uppercase tracking-wide mr-1">takeaway:</span>
+                  {p.takeaway}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {sorted.some((p) => (p.evidence?.length ?? 0) > 0) && (
         <div className="mt-8 space-y-4">

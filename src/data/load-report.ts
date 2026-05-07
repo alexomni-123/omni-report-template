@@ -10,6 +10,7 @@ import {
   synthesizedCopyHooks,
   synthesizedICPOneLine,
   synthesizedPains,
+  synthesizedPressContext,
   synthesizedSnapshot,
   synthesizedTestPlan,
   type Evidence,
@@ -76,4 +77,5 @@ export const report = {
   competitors: synthesizedCompetitors.length ? synthesizedCompetitors : sampleReport.competitors,
   competitorGap: synthesizedCompetitorGap,
   googleSuggest: suggestRaw as { seed: string; suggestions: string[] }[],
+  pressContext: synthesizedPressContext,
 };
