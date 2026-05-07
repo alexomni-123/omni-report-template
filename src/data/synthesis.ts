@@ -208,6 +208,72 @@ export const synthesizedPains: Record<string, Pick<SynthesizedPain, "evidence">>
 };
 
 /**
+ * Real SG window contractors. Hero hook / offer / proof extracted directly from
+ * each company's homepage on 2026-05-07 via WebFetch. Not invented.
+ *
+ * Picked these three because they represent three distinct positionings —
+ * pricing-led, heritage-led, certification-led — which is the cleanest cohort
+ * for a competitive teardown. (Hoisted here so synthesizedAngles can compute
+ * differentiation against this competitor set.)
+ */
+export const synthesizedCompetitors: Competitor[] = [
+  {
+    name: "Home Aluminium Metal Works",
+    url: "https://homealuminiumsg.com/",
+    heroHook: "Best HDB Windows & Grilles contractor in Singapore with excellent workmanship.",
+    offer: "Free site survey + no GST on window and grille supply, installation, or replacement.",
+    proof: "Since 2009 · HDB-licensed · BCA-approved · 200+ customer reviews",
+  },
+  {
+    name: "Ho Ho Door",
+    url: "https://www.hohodoorsingapore.com/aluminium-sliding-casement-window",
+    heroHook: "Custom-built aluminium sliding and casement windows designed for Singapore homes.",
+    offer: "Direct factory sales with HDB permit applications included at no extra cost.",
+    proof: "Established 1976 · 49 years in business · HDB + BCA licensed · locally manufactured",
+  },
+  {
+    name: "Top 1 Singapore Safety Window",
+    url: "https://www.top1window.com.sg/",
+    heroHook: "Professional HDB & BCA-certified window contractor delivering high-quality aluminium solutions.",
+    offer: "Direct factory pricing with 7–10 days installation lead time on windows, doors, grilles, and gates.",
+    proof: "Since 2010 · HDB + BCA 3/4 window-certified · 15+ years in business",
+  },
+];
+
+/**
+ * Map each angle's pain language to a regex used to test whether competitor
+ * homepages address it. Used to compute `differentiation` in synthesizedAngles.
+ */
+const ANGLE_KEYWORDS: Record<string, RegExp> = {
+  "monsoon-seal": /\b(seep(age)?|leak(s|ing)?|water|monsoon|rain|sealed?|sealant|silicone)\b/i,
+  "mrt-quiet": /\b(noise|sound|sound[-\s]?proof|mrt|quiet|sleep|loud|laminat(ed)?)\b/i,
+  "aircon-bill": /\b(aircon|air[-\s]?con|cooling|heat|low[-\s]?e|tinted|bill|electricity|sp\s*bill|sun)\b/i,
+  "mold-stale-air": /\b(mou?ld|mildew|humid(ity)?|condensation|stale|stuffy|ventilat(e|ion))\b/i,
+  "trust-warranty": /\b(warranty|guarantee|reliable|trustworthy|honest|disappear|run\s*away|never\s*came)\b/i,
+  "hdb-easy": /\b(hdb\s*permit|permit|approval|paperwork|bca[-\s]?(licensed|approved|registered))\b/i,
+  "transparent-quote": /\b(all[-\s]?in|no\s*gst|no\s*hidden|transparent|no\s*surcharge|fixed\s*price|upfront)\b/i,
+};
+
+/**
+ * Quantified differentiation: 100 = zero competitors address this angle's
+ * pain language → wide open. 0 = every competitor already addresses it →
+ * commodity. We score each angle against the 3 competitors' hero+offer+proof
+ * text (extracted earlier via WebFetch).
+ */
+function computeDifferentiation(angleId: string): number {
+  const re = ANGLE_KEYWORDS[angleId];
+  if (!re) return 50; // default for angles without a keyword map
+  const competitorTexts = synthesizedCompetitors.map(
+    (c) => `${c.heroHook} ${c.offer} ${c.proof}`
+  );
+  const hits = competitorTexts.filter((t) => re.test(t)).length;
+  const total = competitorTexts.length || 1;
+  // Differentiation = (1 - share-mentioning) * 100, clamped to 30–95 so charts stay readable
+  const raw = (1 - hits / total) * 100;
+  return Math.round(Math.max(30, Math.min(95, raw)));
+}
+
+/**
  * Re-ranked angles, grounded in what the corpus actually showed.
  *
  * Notes on this re-ranking vs. the fabricated sample:
@@ -225,15 +291,20 @@ export const synthesizedPains: Record<string, Pick<SynthesizedPain, "evidence">>
  *   complaints are post-install, not pre-install).
  * - Trust angle moves up: massive evidence base of contractor horror stories.
  */
-export const synthesizedAngles: Angle[] = [
-  { id: "monsoon-seal", name: "Monsoon Seal Guarantee", painIntensity: 95, keywordVolume: 2800, differentiation: 81, rank: 1 },
-  { id: "mrt-quiet", name: "MRT-Quiet Bedrooms", painIntensity: 90, keywordVolume: 4400, differentiation: 76, rank: 2 },
-  { id: "trust-warranty", name: "We Don't Disappear (Anti-Contractor-MIA)", painIntensity: 85, keywordVolume: 1700, differentiation: 78, rank: 3 },
-  { id: "aircon-bill", name: "Aircon Bill Killer (Low-E education)", painIntensity: 87, keywordVolume: 4680, differentiation: 60, rank: 4 },
-  { id: "mold-stale-air", name: "Stop the Mould (Bed-Sheet Story)", painIntensity: 75, keywordVolume: 1100, differentiation: 70, rank: 5 },
-  { id: "hdb-easy", name: "HDB Permit, Done For You", painIntensity: 70, keywordVolume: 2280, differentiation: 65, rank: 6 },
-  { id: "transparent-quote", name: "All-In Quote, No GST Surprises", painIntensity: 65, keywordVolume: 1100, differentiation: 58, rank: 7 },
+const ANGLES_RAW: Omit<Angle, "differentiation">[] = [
+  { id: "monsoon-seal", name: "Monsoon Seal Guarantee", painIntensity: 95, keywordVolume: 2800, rank: 1 },
+  { id: "mrt-quiet", name: "MRT-Quiet Bedrooms", painIntensity: 90, keywordVolume: 4400, rank: 2 },
+  { id: "trust-warranty", name: "We Don't Disappear (Anti-Contractor-MIA)", painIntensity: 85, keywordVolume: 1700, rank: 3 },
+  { id: "aircon-bill", name: "Aircon Bill Killer (Low-E education)", painIntensity: 87, keywordVolume: 4680, rank: 4 },
+  { id: "mold-stale-air", name: "Stop the Mould (Bed-Sheet Story)", painIntensity: 75, keywordVolume: 1100, rank: 5 },
+  { id: "hdb-easy", name: "HDB Permit, Done For You", painIntensity: 70, keywordVolume: 2280, rank: 6 },
+  { id: "transparent-quote", name: "All-In Quote, No GST Surprises", painIntensity: 65, keywordVolume: 1100, rank: 7 },
 ];
+
+export const synthesizedAngles: Angle[] = ANGLES_RAW.map((a) => ({
+  ...a,
+  differentiation: computeDifferentiation(a.id),
+}));
 
 export const synthesizedCopyHooks: CopyHook[] = [
   {
@@ -338,38 +409,6 @@ export const synthesizedCopyHooks: CopyHook[] = [
     openingLine:
       "No 'site visit fee', no 'debris removal surcharge', no 'after-7pm hoist rate'. The quote includes GST, removal of old units, and the BCA paperwork. The only line that ever changes is if you upgrade glass.",
     sources: [],
-  },
-];
-
-/**
- * Real SG window contractors. Hero hook / offer / proof extracted directly from
- * each company's homepage on 2026-05-07 via WebFetch. Not invented.
- *
- * Picked these three because they represent three distinct positionings —
- * pricing-led, heritage-led, certification-led — which is the cleanest cohort
- * for a competitive teardown.
- */
-export const synthesizedCompetitors: Competitor[] = [
-  {
-    name: "Home Aluminium Metal Works",
-    url: "https://homealuminiumsg.com/",
-    heroHook: "Best HDB Windows & Grilles contractor in Singapore with excellent workmanship.",
-    offer: "Free site survey + no GST on window and grille supply, installation, or replacement.",
-    proof: "Since 2009 · HDB-licensed · BCA-approved · 200+ customer reviews",
-  },
-  {
-    name: "Ho Ho Door",
-    url: "https://www.hohodoorsingapore.com/aluminium-sliding-casement-window",
-    heroHook: "Custom-built aluminium sliding and casement windows designed for Singapore homes.",
-    offer: "Direct factory sales with HDB permit applications included at no extra cost.",
-    proof: "Established 1976 · 49 years in business · HDB + BCA licensed · locally manufactured",
-  },
-  {
-    name: "Top 1 Singapore Safety Window",
-    url: "https://www.top1window.com.sg/",
-    heroHook: "Professional HDB & BCA-certified window contractor delivering high-quality aluminium solutions.",
-    offer: "Direct factory pricing with 7–10 days installation lead time on windows, doors, grilles, and gates.",
-    proof: "Since 2010 · HDB + BCA 3/4 window-certified · 15+ years in business",
   },
 ];
 
