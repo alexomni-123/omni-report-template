@@ -24,9 +24,12 @@ const STAGE_LABEL: Record<string, string> = {
   brand: "Brand-aware",
 };
 
-type Props = { keywords: Keyword[] };
+type Props = {
+  keywords: Keyword[];
+  googleSuggest?: { seed: string; suggestions: string[] }[];
+};
 
-export function Section4Keywords({ keywords }: Props) {
+export function Section4Keywords({ keywords, googleSuggest }: Props) {
   const grouped = (["problem", "solution", "brand"] as const).map((stage) => {
     const list = keywords.filter((k) => k.stage === stage);
     return {
@@ -90,6 +93,33 @@ export function Section4Keywords({ keywords }: Props) {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
+
+      {googleSuggest && googleSuggest.length > 0 && (() => {
+        const flat = [...new Set(googleSuggest.flatMap((g) => g.suggestions))]
+          .filter((s) => /\b(window|casement|sliding|aircon|aluminum|aluminium|seepage|leak|noise|sound|hdb|condensation|mou?ld|grille|low\s*e|glass|frame|sealant|silicone)\b/i.test(s))
+          .slice(0, 24);
+        if (flat.length === 0) return null;
+        return (
+          <div className="mt-8 report-card p-5">
+            <p className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)] mb-3">
+              Google Search completions (live SG search behavior, fetched via suggestqueries.google.com)
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {flat.map((s) => (
+                <span
+                  key={s}
+                  className="text-xs font-mono px-2 py-1 rounded-md bg-[color:var(--accent-soft)] text-[color:var(--foreground)]/85 border border-[color:var(--accent)]/20"
+                >
+                  {s}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-xs text-[color:var(--muted)]">
+              These are the actual Google Suggest completions Singaporeans receive when typing the seed phrases into Google — real Google-ranked search demand, not citation counts.
+            </p>
+          </div>
+        );
+      })()}
     </SectionShell>
   );
 }

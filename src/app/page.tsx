@@ -49,7 +49,7 @@ export default function Home() {
         <Section1Snapshot snapshot={r.snapshot} />
         <Section2ICP icp={r.icp} />
         <Section3PainPoints painPoints={r.painPoints} />
-        <Section4Keywords keywords={r.keywords} />
+        <Section4Keywords keywords={r.keywords} googleSuggest={r.googleSuggest} />
         <Section5Competitors competitors={r.competitors} gap={r.competitorGap} />
         <Section6Angles angles={r.angles} />
         <Section7CopyHooks hooks={r.copyHooks} angles={r.angles} />

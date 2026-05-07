@@ -1,6 +1,7 @@
 import type { Report, PainPoint } from "@/lib/types";
 import { sampleReport } from "./sample";
 import scraped from "./scraped/window-sg.json";
+import suggestRaw from "./scraped/window-sg-suggest.json";
 import {
   synthesizedAngles,
   synthesizedCompetitorGap,
@@ -55,4 +56,5 @@ export const report = {
   testPlan: synthesizedTestPlan.length ? synthesizedTestPlan : sampleReport.testPlan,
   competitors: synthesizedCompetitors.length ? synthesizedCompetitors : sampleReport.competitors,
   competitorGap: synthesizedCompetitorGap,
+  googleSuggest: suggestRaw as { seed: string; suggestions: string[] }[],
 };

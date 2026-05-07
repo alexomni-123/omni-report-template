@@ -3,6 +3,7 @@
   "generatedBy": "OMNI BRAIN Oracle (real-data scrape)",
   "isRealData": true,
   "sourceTotals": {
+    "google-maps": 12,
     "renotalk": 140,
     "reddit": 1452
   },
