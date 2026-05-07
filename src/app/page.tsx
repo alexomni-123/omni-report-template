@@ -17,24 +17,29 @@ export default function Home() {
       <ReportHeader generatedAt={r.generatedAt} generatedBy={r.generatedBy} snapshot={r.snapshot} />
 
       {r.isRealData ? (
-        <div className="mb-8 rounded-lg border border-emerald-300/40 bg-emerald-50 dark:bg-emerald-900/20 px-4 py-3 text-sm">
-          <span className="font-mono uppercase tracking-wide text-[11px] text-emerald-700 dark:text-emerald-400">Real data</span>
-          {" — "}
-          Pain points + keyword phrases below are extracted from {realCount.toLocaleString()} scraped customer messages
-          {Object.entries(r.sourceTotals).length > 0 && (
-            <span className="text-[color:var(--muted)]">
-              {" ("}
-              {Object.entries(r.sourceTotals).map(([s, n]) => `${s}: ${n}`).join(", ")}
-              {")"}
-            </span>
-          )}
-          . Other sections still use curated sample data.
+        <div className="mb-8 rounded-lg border border-emerald-300/40 bg-emerald-50 dark:bg-emerald-900/20 px-4 py-3 text-sm space-y-1">
+          <div>
+            <span className="font-mono uppercase tracking-wide text-[11px] text-emerald-700 dark:text-emerald-400">Real data + LLM synthesis</span>
+            {" — "}
+            Pain points and keywords are extracted from {realCount.toLocaleString()} scraped Reddit comments
+            {Object.entries(r.sourceTotals).length > 0 && (
+              <span className="text-[color:var(--muted)]">
+                {" ("}
+                {Object.entries(r.sourceTotals).map(([s, n]) => `${s}: ${n.toLocaleString()}`).join(", ")}
+                {")"}
+              </span>
+            )}
+            . Verbatim evidence quotes below are curated by Claude reading the corpus directly. Marketing angles, copy hooks, and test plan are LLM-synthesized from the real evidence.
+          </div>
+          <div className="text-xs text-[color:var(--muted)]">
+            Honest caveat: corpus is Reddit-only and skews younger / tech-savvy. Validate against Facebook Groups + Google reviews of competitor businesses (which represent the older HDB demographic) before shipping to a real client.
+          </div>
         </div>
       ) : (
         <div className="mb-8 rounded-lg border border-amber-300/40 bg-amber-50 dark:bg-amber-900/20 px-4 py-3 text-sm">
           <span className="font-mono uppercase tracking-wide text-[11px] text-amber-700 dark:text-amber-500">Sample data</span>
           {" — "}
-          Run <code className="font-mono">cd scraper &amp;&amp; bun run scrape:all &amp;&amp; bun run build-report</code> to replace pain points and keywords with real customer language from Reddit, forums, and Google Maps.
+          Run <code className="font-mono">cd scraper &amp;&amp; bun run scrape:all &amp;&amp; bun run build-report</code> to replace pain points and keywords with real customer language.
         </div>
       )}
 

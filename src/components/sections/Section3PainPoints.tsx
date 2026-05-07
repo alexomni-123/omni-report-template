@@ -77,25 +77,45 @@ export function Section3PainPoints({ painPoints }: Props) {
         </tbody>
       </table>
 
-      {sorted.some((p) => (p.topPhrases?.length ?? 0) > 0 || (p.citations?.length ?? 0) > 0) && (
+      {sorted.some((p) => (p.evidence?.length ?? 0) > 0) && (
         <div className="mt-8 space-y-4">
           <p className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)]">
-            Real customer language (from scrape)
+            Verbatim customer evidence
           </p>
           {sorted
-            .filter((p) => (p.topPhrases?.length ?? 0) > 0 || (p.citations?.length ?? 0) > 0)
+            .filter((p) => (p.evidence?.length ?? 0) > 0)
             .map((p) => (
               <div key={p.id} className="report-card p-4">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-3">
                   <span
                     className="h-2 w-2 rounded-full"
                     style={{ backgroundColor: intensityColor(p.intensity) }}
                   />
                   <p className="text-sm font-medium">{p.label}</p>
                 </div>
+                <ul className="space-y-3">
+                  {p.evidence?.map((e, i) => (
+                    <li key={i} className="border-l-2 border-[color:var(--accent)]/40 pl-3">
+                      <p className="text-sm italic leading-snug text-[color:var(--foreground)]/85">
+                        &ldquo;{e.quote}&rdquo;
+                      </p>
+                      <p className="text-[11px] font-mono text-[color:var(--muted)] mt-1">
+                        <a
+                          href={e.url}
+                          target="_blank"
+                          rel="noopener"
+                          className="text-[color:var(--accent)] underline decoration-dotted underline-offset-2 mr-1"
+                        >
+                          ↗
+                        </a>
+                        {e.thread}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
                 {(p.topPhrases?.length ?? 0) > 0 && (
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {p.topPhrases?.slice(0, 8).map((ph) => (
+                  <div className="flex flex-wrap gap-1.5 mt-3 pt-3 border-t border-[color:var(--card-border)]/40">
+                    {p.topPhrases?.slice(0, 6).map((ph) => (
                       <span
                         key={ph.text}
                         className="text-xs px-2 py-0.5 rounded-full bg-[color:var(--accent-soft)] text-[color:var(--foreground)]/80"
@@ -105,23 +125,6 @@ export function Section3PainPoints({ painPoints }: Props) {
                       </span>
                     ))}
                   </div>
-                )}
-                {(p.citations?.length ?? 0) > 0 && (
-                  <ul className="text-xs space-y-1">
-                    {p.citations?.slice(0, 3).map((c, i) => (
-                      <li key={i} className="text-[color:var(--foreground)]/70">
-                        <a
-                          href={c.url}
-                          target="_blank"
-                          rel="noopener"
-                          className="text-[color:var(--accent)] underline decoration-dotted underline-offset-2 mr-1"
-                        >
-                          ↗
-                        </a>
-                        {c.snippet}
-                      </li>
-                    ))}
-                  </ul>
                 )}
               </div>
             ))}

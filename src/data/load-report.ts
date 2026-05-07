@@ -1,6 +1,13 @@
-import type { Report } from "@/lib/types";
+import type { Report, PainPoint } from "@/lib/types";
 import { sampleReport } from "./sample";
 import scraped from "./scraped/window-sg.json";
+import {
+  synthesizedAngles,
+  synthesizedCopyHooks,
+  synthesizedPains,
+  synthesizedTestPlan,
+  type Evidence,
+} from "./synthesis";
 
 type ScrapedReport = {
   isRealData: boolean;
@@ -12,20 +19,32 @@ type ScrapedReport = {
 const real = scraped as unknown as ScrapedReport;
 
 /**
- * The page reads from this loader. When the scraper has written real data
- * (`isRealData: true`), pain points and keywords come from the scrape;
- * everything else still comes from the curated sample (until v2 generates them).
+ * Merge precedence: synthesis (LLM-curated) > scraped (regex-clustered) > sample (fabricated).
+ *
+ * The page UI renders different banners depending on which layer is active so the
+ * reader always knows what's grounded in real data and what is illustrative.
  */
-export const report: Report & { isRealData: boolean; sourceTotals: Record<string, number> } = {
+
+const isReal = !!real.isRealData;
+
+// Pain points: prefer scraped (with real intensities + citations), then layer in
+// synthesized evidence quotes.
+const painPoints: (PainPoint & { evidence?: Evidence[] })[] = (
+  isReal && real.painPoints?.length ? real.painPoints : sampleReport.painPoints
+).map((p) => ({
+  ...p,
+  evidence: synthesizedPains[p.id]?.evidence,
+}));
+
+export const report = {
   ...sampleReport,
-  isRealData: !!real.isRealData,
+  isRealData: isReal,
+  isSynthesized: true,
   sourceTotals: real.sourceTotals ?? {},
-  painPoints:
-    real.isRealData && real.painPoints && real.painPoints.length
-      ? real.painPoints
-      : sampleReport.painPoints,
-  keywords:
-    real.isRealData && real.keywords && real.keywords.length
-      ? real.keywords
-      : sampleReport.keywords,
+  painPoints,
+  keywords: isReal && real.keywords?.length ? real.keywords : sampleReport.keywords,
+  // Synthesis layer always wins for narrative outputs (when present)
+  angles: synthesizedAngles.length ? synthesizedAngles : sampleReport.angles,
+  copyHooks: synthesizedCopyHooks.length ? synthesizedCopyHooks : sampleReport.copyHooks,
+  testPlan: synthesizedTestPlan.length ? synthesizedTestPlan : sampleReport.testPlan,
 };

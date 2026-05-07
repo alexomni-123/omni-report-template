@@ -23,6 +23,7 @@ export type PainPoint = {
   sources: { client: number; reviews: number; reddit: number; forums: number };
   topPhrases?: { text: string; count: number }[];
   citations?: { url: string; snippet: string }[];
+  evidence?: { quote: string; url: string; thread: string }[];
 };
 
 export type Keyword = {
