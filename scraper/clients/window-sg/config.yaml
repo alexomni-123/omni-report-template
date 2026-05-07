@@ -1,0 +1,79 @@
+# Scaled-down scrape for fast end-to-end demos. The full prod config (config.yaml)
+# crawls 5 subs × 12 queries × 25 posts ≈ 30–60 min. This config covers all 8
+# SG-window pain clusters in ~12 min by hitting the most active subs and the
+# most distinctive query per cluster.
+clientName: "Demo Window SG"
+clientWebsite: "https://example-windows.sg"
+serviceArea: "Singapore (island-wide, HDB-towns priority)"
+vertical: "HDB & Condo Window Replacement"
+
+reddit:
+  subreddits:
+    - singapore
+    - HDB
+    - askSingapore
+  queries:
+    - window
+    - casement
+    - sliding window
+    - aircon bill
+    - water seepage
+    - mrt noise
+    - hdb permit
+    - low e glass
+  maxPostsPerQuery: 6
+  commentDepth: 2
+
+forums:
+  hardwarezone: { base: "", queries: [], maxPostsPerQuery: 0 }
+  renotalk: { base: "", queries: [], maxPostsPerQuery: 0 }
+
+googleMaps:
+  businesses: []
+  reviewsPerBusiness: 0
+
+carousell:
+  searchTerms: []
+  maxListings: 0
+
+nlp:
+  minPhraseLength: 2
+  maxPhraseLength: 5
+  minOccurrences: 3
+  stopwords:
+    - the
+    - and
+    - for
+    - with
+    - this
+    - that
+    - have
+    - was
+    - just
+    - but
+    - not
+    - all
+    - get
+    - can
+    - one
+    - really
+    - some
+    - very
+    - you
+    - your
+    - are
+    - they
+    - their
+    - them
+    - has
+    - had
+    - will
+    - what
+    - when
+    - where
+    - why
+    - how
+
+output:
+  reportPath: "../src/data/scraped/window-sg.json"
+  rawPath: "./output/raw/"

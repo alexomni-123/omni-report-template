@@ -1,0 +1,85 @@
+# Template config for a new agency client. Copy this directory to
+# `scraper/clients/<your-client-slug>/` and edit the values below.
+#
+# Workflow:
+#   cp -r scraper/clients/_template scraper/clients/acme-blinds
+#   $EDITOR scraper/clients/acme-blinds/config.yaml
+#   cd scraper && bun src/run-reddit.ts clients/acme-blinds/config.yaml
+#   bun src/run-renotalk.ts                 # if SG-vertical
+#   bun src/build-report.ts clients/acme-blinds/config.yaml
+#
+# Output lands at src/data/scraped/<slug>.json — wire that into a new
+# client-specific synthesis file (src/data/synthesis-acme-blinds.ts) or
+# fan out the load-report.ts to switch on a CLIENT env var at build time.
+
+clientName: "ACME Window Co."
+clientWebsite: "https://acme-windows.example.com"
+serviceArea: "City Name, Region"
+vertical: "Vertical name (e.g. 'HDB & Condo Window Replacement')"
+
+reddit:
+  subreddits:
+    - subreddit_name_1
+    - subreddit_name_2
+  queries:
+    - "vertical-specific search term 1"
+    - "vertical-specific search term 2"
+  maxPostsPerQuery: 6
+  commentDepth: 2
+
+# For non-SG clients, leave forums.* empty; they're SG-renovation specific.
+forums:
+  hardwarezone: { base: "", queries: [], maxPostsPerQuery: 0 }
+  renotalk: { base: "", queries: [], maxPostsPerQuery: 0 }
+
+googleMaps:
+  businesses:
+    - "Competitor 1 Business Name"
+    - "Competitor 2 Business Name"
+  reviewsPerBusiness: 30
+
+carousell:
+  searchTerms: []
+  maxListings: 0
+
+nlp:
+  minPhraseLength: 2
+  maxPhraseLength: 5
+  minOccurrences: 3
+  stopwords:
+    - the
+    - and
+    - for
+    - with
+    - this
+    - that
+    - have
+    - was
+    - just
+    - but
+    - not
+    - all
+    - get
+    - can
+    - one
+    - really
+    - some
+    - very
+    - you
+    - your
+    - are
+    - they
+    - their
+    - them
+    - has
+    - had
+    - will
+    - what
+    - when
+    - where
+    - why
+    - how
+
+output:
+  reportPath: "../src/data/scraped/CLIENT-SLUG.json"
+  rawPath: "./output/raw/CLIENT-SLUG/"
