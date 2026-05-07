@@ -45,21 +45,60 @@ async function loadRawComments(rawDir: string): Promise<RawComment[]> {
  * Adds optional `topPhrases` + `citations` alongside the existing structure so the
  * UI can show real customer phrases and citation links when available.
  */
+/**
+ * Filter out generic noise n-grams ("going to be", "want to know", etc.) before
+ * the keyword list ships to the report.
+ */
+const NOISE_PATTERNS = [
+  /^(going|want|need|trying|looking|asking|saying|telling)\s/i,
+  /\b(thing|things|stuff|something|anything|nothing|someone)\b/i,
+  /^\d+(\.\d+)?$/,
+  /^[a-z]\b/, // single letters
+];
+
+function isNoise(text: string): boolean {
+  if (text.length < 5) return true;
+  return NOISE_PATTERNS.some((re) => re.test(text));
+}
+
 function pickTopKeywords(phrases: { text: string; count: number }[], topN = 30) {
-  return phrases.slice(0, topN).map((p) => ({
-    phrase: p.text,
-    monthlyVolume: p.count, // count instead of search volume — keep the field name for compatibility
-    stage: classifyStage(p.text),
-  }));
+  return phrases
+    .filter((p) => !isNoise(p.text))
+    .slice(0, topN)
+    .map((p) => ({
+      phrase: p.text,
+      monthlyVolume: p.count, // mention count, not Google volume — schema-compatible
+      stage: classifyStage(p.text),
+    }));
 }
 
 function classifyStage(text: string): "problem" | "solution" | "brand" {
   const t = text.toLowerCase();
-  if (/\b(leak|noisy|hot|mou?ld|condensation|seepage|loud|cant\s*sleep|bill\s*high)\b/.test(t))
+  // Problem-stage: pain language — the customer is describing what hurts
+  if (
+    /\b(leak(y|ing)?|noisy|loud|hot|mou?ld|mildew|condensation|seep(age|ing)|drip|drafty|stuffy|cant\s*sleep|cannot\s*sleep|bill\s*(high|expensive)|too\s*(hot|loud|noisy|expensive)|complain|frustrat|annoy|stuck|broken|jam(med)?|cracked?|rotten|rust(ed|ing)?|water\s*(in|inside|leak)|rain\s*(coming|getting|comes)|aircon\s*(bill|cost)|ugly|dated|old|worn)\b/i.test(
+      t
+    )
+  )
     return "problem";
-  if (/\b(low[\s-]?e|laminat|tempered|casement|sliding|upvc|aluminum|aluminium|contractor|warranty|permit|hdb)\b/.test(t))
+
+  // Brand-stage: vendor / company / specific-product names
+  if (
+    /\b(winsam|panemart|clearshield|review|reviews|recommend|recommended|best\s*contractor|best\s*window|reputable|trustworthy|legit)\b/i.test(
+      t
+    )
+  )
+    return "brand";
+
+  // Solution-stage: product / contractor / process language
+  if (
+    /\b(low[\s-]?e|laminat|tempered|double[\s-]?glaz|triple[\s-]?glaz|casement|sliding|upvc|aluminum|aluminium|tinted|grille|contractor|installer|warranty|permit|hdb\s*permit|bca|application|approval|quote|quotation|cost|price|estimate|installation)\b/i.test(
+      t
+    )
+  )
     return "solution";
-  if (/\b(winsam|panemart|clearshield|reviews?|recommend|best)\b/.test(t)) return "brand";
+
+  // If a phrase is just a noun naming the thing ("the windows", "casement window"), default to solution
   return "solution";
 }
 
