@@ -10,12 +10,21 @@ import { Section7CopyHooks } from "@/components/sections/Section7CopyHooks";
 import { Section8TestPlan } from "@/components/sections/Section8TestPlan";
 import { Section9NextActions } from "@/components/sections/Section9NextActions";
 import { DataQualityTable } from "@/components/DataQualityTable";
+import { PrintCoverPage } from "@/components/PrintCoverPage";
+
+const AGENCY_NAME = "OMNI Digital · 15-person agency · alex@omnidigital.com.sg";
 
 export default function Home() {
   const r = report;
   const realCount = Object.values(r.sourceTotals).reduce((s, n) => s + n, 0);
   return (
-    <main className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16">
+    <main className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16" data-brand="omnidigital">
+      <PrintCoverPage
+        snapshot={r.snapshot}
+        generatedAt={r.generatedAt}
+        generatedBy={r.generatedBy}
+        agencyName={AGENCY_NAME}
+      />
       <ReportHeader generatedAt={r.generatedAt} generatedBy={r.generatedBy} snapshot={r.snapshot} />
 
       {r.isRealData ? (

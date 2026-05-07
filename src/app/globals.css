@@ -61,43 +61,76 @@ body {
     --accent: #ea580c;
     --accent-soft: #fef3e7;
   }
+  @page {
+    size: A4;
+    margin: 0.5in 0.55in 0.55in 0.55in;
+  }
+  @page :first {
+    margin: 0;
+  }
   body {
     font-size: 10pt;
     background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
   main {
     max-width: none !important;
-    padding: 0.4in 0.5in !important;
+    padding: 0 !important;
   }
-  /* break sections cleanly to avoid mid-section page splits */
-  section.report-card {
+  /* Section pacing: never break mid-card; force a page break before each section after the first */
+  main > div > section.report-card,
+  main > div > * {
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+  section.report-card {
     border: 1px solid #d1d5db !important;
     background: #fff !important;
+    margin-bottom: 0.4em;
   }
-  /* hide interactive-only controls (none today, but future-proof) */
+  /* Hide interactive controls — print button, etc. */
   .no-print {
     display: none !important;
   }
-  /* SVG charts often overflow on print — constrain */
+  /* Show the print-only cover page */
+  .print-only {
+    display: block !important;
+  }
+  /* SVG charts: constrain + scale down so they fit a page */
   .recharts-wrapper {
     max-width: 100% !important;
+    height: auto !important;
   }
-  /* Don't break bullet lists awkwardly */
+  .recharts-wrapper svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* Don't break list items awkwardly */
   ol li,
   ul li {
     break-inside: avoid;
     page-break-inside: avoid;
   }
-  /* Footnote URLs after links */
+  /* Footnote URLs after links — but skip internal anchors */
   a[href]::after {
     content: " (" attr(href) ")";
     font-size: 8pt;
     color: #6b7280;
     word-break: break-all;
   }
-  a[href^="#"]::after {
+  a[href^="#"]::after,
+  a[href=""]::after {
     content: "";
   }
+  /* Agency branding hook — overrides accent for branded PDF runs */
+  [data-brand="omnidigital"] {
+    --accent: #ea580c;
+    --accent-soft: #fff7ed;
+  }
+}
+
+/* Print-only cover page (hidden on screen) */
+.print-only {
+  display: none;
 }
