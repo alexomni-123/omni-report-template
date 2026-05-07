@@ -56,6 +56,17 @@ export default function Home() {
         </div>
       )}
 
+      <div className="mb-6 flex flex-wrap items-center gap-2 text-xs">
+        <span className="text-[color:var(--muted)] font-mono uppercase tracking-wider">Verticals:</span>
+        <span className="px-2.5 py-1 rounded-full bg-[color:var(--accent)] text-white font-medium">SG Window</span>
+        <a
+          href="skincare-sg/"
+          className="px-2.5 py-1 rounded-full border border-[color:var(--card-border)] hover:border-[color:var(--accent)] hover:text-[color:var(--accent)] transition-colors"
+        >
+          DTC Skincare →
+        </a>
+      </div>
+
       <ExecSummary pains={r.painPoints} angles={r.angles} realCount={realCount} />
 
       <div className="space-y-6">
