@@ -1,7 +1,7 @@
 {
   "config": "clients/skincare-sg/config.yaml",
-  "startedAt": "2026-05-07T12:08:15.998Z",
-  "finishedAt": "2026-05-07T12:08:15.998Z",
+  "startedAt": "2026-05-07T12:32:53.783Z",
+  "finishedAt": "2026-05-07T12:32:53.783Z",
   "bySource": {
     "reddit": {
       "commentsScraped": 3028,
