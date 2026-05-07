@@ -11,7 +11,7 @@ type Props = {
 
 export function SectionShell({ number, title, subtitle, children, className }: Props) {
   return (
-    <section className={clsx("report-card p-6 sm:p-8", className)}>
+    <section className={clsx("report-card p-4 sm:p-6 md:p-8", className)}>
       <header className="mb-6 flex items-baseline gap-4">
         <span className="text-sm font-mono text-[color:var(--muted)]">
           {String(number).padStart(2, "0")}

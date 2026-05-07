@@ -80,10 +80,11 @@ export function Section3PainPoints({ painPoints, press }: Props) {
         </BarChart>
       </ResponsiveContainer>
 
-      <table className="w-full mt-6 text-sm">
+      <div className="mt-6 -mx-2 sm:mx-0 overflow-x-auto">
+      <table className="w-full text-sm min-w-[420px]">
         <thead>
           <tr className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)] border-b border-[color:var(--card-border)]">
-            <th className="text-left py-2">Pain</th>
+            <th className="text-left py-2 px-2">Pain</th>
             <th className="text-left py-2 px-2">Temp</th>
             <th className="text-right py-2 px-2">Client</th>
             <th className="text-right py-2 px-2">Reviews</th>
@@ -117,6 +118,7 @@ export function Section3PainPoints({ painPoints, press }: Props) {
           })}
         </tbody>
       </table>
+      </div>
 
       <p className="text-xs text-[color:var(--muted)] mt-3 leading-snug">
         <strong className="text-[color:var(--foreground)]">Strategic note:</strong> "Hot" pains (avg ≥ 1.0 neg-words/comment) outperform "Chronic" pains in cold-traffic ads.

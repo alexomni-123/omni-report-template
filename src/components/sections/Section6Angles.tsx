@@ -114,7 +114,8 @@ export function Section6Angles({ angles }: Props) {
         </div>
       </div>
 
-      <table className="w-full mt-8 text-sm">
+      <div className="mt-8 -mx-2 sm:mx-0 overflow-x-auto">
+      <table className="w-full text-sm min-w-[440px]">
         <thead>
           <tr className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)] border-b border-[color:var(--card-border)]">
             <th className="text-left py-2 w-10">#</th>
@@ -138,6 +139,7 @@ export function Section6Angles({ angles }: Props) {
           ))}
         </tbody>
       </table>
+      </div>
     </SectionShell>
   );
 }

@@ -20,7 +20,7 @@ export default function Home() {
   const r = report;
   const realCount = Object.values(r.sourceTotals).reduce((s, n) => s + n, 0);
   return (
-    <main className="mx-auto max-w-5xl px-4 sm:px-6 py-10 sm:py-16" data-brand="omnidigital">
+    <main className="mx-auto max-w-5xl px-3 sm:px-6 py-8 sm:py-16" data-brand="omnidigital">
       <PrintCoverPage
         snapshot={r.snapshot}
         generatedAt={r.generatedAt}
