@@ -6,7 +6,9 @@ import {
   synthesizedCompetitorGap,
   synthesizedCompetitors,
   synthesizedCopyHooks,
+  synthesizedICPOneLine,
   synthesizedPains,
+  synthesizedSnapshot,
   synthesizedTestPlan,
   type Evidence,
 } from "./synthesis";
@@ -43,6 +45,8 @@ export const report = {
   isRealData: isReal,
   isSynthesized: true,
   sourceTotals: real.sourceTotals ?? {},
+  snapshot: synthesizedSnapshot,
+  icp: { ...sampleReport.icp, oneLine: synthesizedICPOneLine },
   painPoints,
   keywords: isReal && real.keywords?.length ? real.keywords : sampleReport.keywords,
   // Synthesis layer always wins for narrative outputs (when present)

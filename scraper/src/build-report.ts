@@ -52,14 +52,41 @@ async function loadRawComments(rawDir: string): Promise<RawComment[]> {
  * the keyword list ships to the report.
  */
 const NOISE_PATTERNS = [
-  /^(going|want|need|trying|looking|asking|saying|telling)\s/i,
-  /\b(thing|things|stuff|something|anything|nothing|someone)\b/i,
+  /^(the|a|an|some|any|every|each)\s/i, // definite/indefinite articles carry no intent signal
+  /^(going|want|need|trying|looking|asking|saying|telling|got|getting)\s/i,
+  /\b(thing|things|stuff|something|anything|nothing|someone|people|guys?)\b/i,
+  /^(my|your|his|her|their|our)\s/i, // possessives are mostly generic
+  /^(more|less|few|many|much)\s+than\b/i, // comparison fragments
+  /^(away|coming|going|back|down|up|out|in)\s+(from|to)\b/i, // prepositional fragments
+  /\s(than|that|which|who|whom|whose|when|where|why|how|because|but|so)\b/i, // mid-sentence connectors
   /^\d+(\.\d+)?$/,
   /^[a-z]\b/, // single letters
+  /^(yes|no|ok|lol|haha|btw|fyi|imo|imho|cigarette\s*smoke)\b/i,
 ];
+
+const GENERIC_BIGRAMS = new Set([
+  "living room",
+  "bed room",
+  "bedroom window", // too generic; let "casement window" / "sliding window" win
+  "the design",
+  "able open",
+  "sense from",
+  "perspective just",
+  "year old", // ambiguous (window age vs person age)
+  "next time",
+  "don't know",
+  "don't think",
+  "water bed", // false positive vs "water seepage"
+  // off-topic threads that slipped through the on-topic filter
+  "sbs transit",
+  "double decker",
+  "bus service",
+  "cigarette smoke",
+]);
 
 function isNoise(text: string): boolean {
   if (text.length < 5) return true;
+  if (GENERIC_BIGRAMS.has(text)) return true;
   return NOISE_PATTERNS.some((re) => re.test(text));
 }
 
@@ -78,15 +105,15 @@ function classifyStage(text: string): "problem" | "solution" | "brand" {
   const t = text.toLowerCase();
   // Problem-stage: pain language — the customer is describing what hurts
   if (
-    /\b(leak(y|ing)?|noisy|loud|hot|mou?ld|mildew|condensation|seep(age|ing)|drip|drafty|stuffy|cant\s*sleep|cannot\s*sleep|bill\s*(high|expensive)|too\s*(hot|loud|noisy|expensive)|complain|frustrat|annoy|stuck|broken|jam(med)?|cracked?|rotten|rust(ed|ing)?|water\s*(in|inside|leak)|rain\s*(coming|getting|comes)|aircon\s*(bill|cost)|ugly|dated|old|worn)\b/i.test(
+    /\b(leak(y|ing|s)?|noisy|loud|noise\s*pollution|mou?ld(y)?|mildew|condensation|seep(age|ing)?|drip|drafty|stuffy|sleep(less)?|insomnia|cant\s*sleep|cannot\s*sleep|wake\s*up|woken|disturb(ed|ing)?|bill\s*(high|expensive|crazy|insane)|too\s*(hot|loud|noisy|expensive|warm)|complain|frustrat|annoy|stuck|broken|jam(med)?|cracked?|rotten|rust(ed|ing)?|hate|terrible|awful|nightmare|disgust(ing)?|water\s*(in|inside|leak|seep)|rain\s*(coming|getting|comes|hits|in)|aircon\s*(bill|cost|crazy|broken|24)|electric(ity)?\s*bill|ugly|dated|old|worn|disrepair|deterior|gave\s*up)\b/i.test(
       t
     )
   )
     return "problem";
 
-  // Brand-stage: vendor / company / specific-product names
+  // Brand-stage: vendor / company / specific-product names + comparison intent
   if (
-    /\b(winsam|panemart|clearshield|review|reviews|recommend|recommended|best\s*contractor|best\s*window|reputable|trustworthy|legit)\b/i.test(
+    /\b(home\s*aluminium|hoho|ho\s*ho\s*door|top\s*1\s*window|panemart|clearshield|winsam|reviews?|recommend(ed)?|best\s*(contractor|window|installer)|reputable|trustworthy|legit|vs\.?\s*\w|compared\s*to|which\s*is\s*better)\b/i.test(
       t
     )
   )
@@ -94,13 +121,13 @@ function classifyStage(text: string): "problem" | "solution" | "brand" {
 
   // Solution-stage: product / contractor / process language
   if (
-    /\b(low[\s-]?e|laminat|tempered|double[\s-]?glaz|triple[\s-]?glaz|casement|sliding|upvc|aluminum|aluminium|tinted|grille|contractor|installer|warranty|permit|hdb\s*permit|bca|application|approval|quote|quotation|cost|price|estimate|installation)\b/i.test(
+    /\b(low[\s-]?e|laminat|tempered|double[\s-]?glaz|triple[\s-]?glaz|casement|sliding|upvc|aluminium|aluminum|tinted|grille|contractor|installer|warranty|permit|hdb\s*permit|bca|application|approval|quote|quotation|cost|price|estimate|installation|sound[\s-]?proof|insulat|sealant|silicone|caulk(ing)?)\b/i.test(
       t
     )
   )
     return "solution";
 
-  // If a phrase is just a noun naming the thing ("the windows", "casement window"), default to solution
+  // Default: if it's a bare noun phrase with no signal, mark as solution but it'll be deprioritized by frequency
   return "solution";
 }
 

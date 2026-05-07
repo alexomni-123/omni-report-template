@@ -307,34 +307,14 @@
   ],
   "keywords": [
     {
-      "phrase": "the noise",
-      "monthlyVolume": 45,
-      "stage": "solution"
-    },
-    {
       "phrase": "water seepage",
       "monthlyVolume": 26,
       "stage": "problem"
     },
     {
-      "phrase": "the window",
-      "monthlyVolume": 25,
-      "stage": "solution"
-    },
-    {
-      "phrase": "living room",
-      "monthlyVolume": 25,
-      "stage": "solution"
-    },
-    {
-      "phrase": "the aircon",
-      "monthlyVolume": 21,
-      "stage": "solution"
-    },
-    {
       "phrase": "noise pollution",
       "monthlyVolume": 21,
-      "stage": "solution"
+      "stage": "problem"
     },
     {
       "phrase": "air con",
@@ -342,78 +322,8 @@
       "stage": "solution"
     },
     {
-      "phrase": "cigarette smoke",
-      "monthlyVolume": 19,
-      "stage": "solution"
-    },
-    {
-      "phrase": "the windows",
-      "monthlyVolume": 19,
-      "stage": "solution"
-    },
-    {
-      "phrase": "the water",
-      "monthlyVolume": 15,
-      "stage": "solution"
-    },
-    {
-      "phrase": "more than",
-      "monthlyVolume": 13,
-      "stage": "solution"
-    },
-    {
       "phrase": "mrt track",
       "monthlyVolume": 13,
-      "stage": "solution"
-    },
-    {
-      "phrase": "away from",
-      "monthlyVolume": 12,
-      "stage": "solution"
-    },
-    {
-      "phrase": "my house",
-      "monthlyVolume": 12,
-      "stage": "solution"
-    },
-    {
-      "phrase": "don't know",
-      "monthlyVolume": 12,
-      "stage": "solution"
-    },
-    {
-      "phrase": "next time",
-      "monthlyVolume": 12,
-      "stage": "solution"
-    },
-    {
-      "phrase": "water bed",
-      "monthlyVolume": 12,
-      "stage": "solution"
-    },
-    {
-      "phrase": "better than",
-      "monthlyVolume": 11,
-      "stage": "solution"
-    },
-    {
-      "phrase": "the window.",
-      "monthlyVolume": 11,
-      "stage": "solution"
-    },
-    {
-      "phrase": "sbs transit",
-      "monthlyVolume": 11,
-      "stage": "solution"
-    },
-    {
-      "phrase": "double decker",
-      "monthlyVolume": 11,
-      "stage": "solution"
-    },
-    {
-      "phrase": "bus service",
-      "monthlyVolume": 11,
       "stage": "solution"
     },
     {
@@ -427,16 +337,6 @@
       "stage": "solution"
     },
     {
-      "phrase": "many people",
-      "monthlyVolume": 10,
-      "stage": "solution"
-    },
-    {
-      "phrase": "the noise.",
-      "monthlyVolume": 10,
-      "stage": "solution"
-    },
-    {
       "phrase": "casement windows",
       "monthlyVolume": 10,
       "stage": "solution"
@@ -447,13 +347,113 @@
       "stage": "solution"
     },
     {
-      "phrase": "the house",
+      "phrase": "without aircon",
       "monthlyVolume": 10,
       "stage": "solution"
     },
     {
-      "phrase": "the noise,",
+      "phrase": "used it.",
       "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "noise from",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "sounds like",
+      "monthlyVolume": 9,
+      "stage": "solution"
+    },
+    {
+      "phrase": "double decker buses",
+      "monthlyVolume": 9,
+      "stage": "solution"
+    },
+    {
+      "phrase": "singapore bus service",
+      "monthlyVolume": 9,
+      "stage": "solution"
+    },
+    {
+      "phrase": "electricity bill",
+      "monthlyVolume": 9,
+      "stage": "problem"
+    },
+    {
+      "phrase": "noise cancelling",
+      "monthlyVolume": 9,
+      "stage": "solution"
+    },
+    {
+      "phrase": "loud noise",
+      "monthlyVolume": 9,
+      "stage": "problem"
+    },
+    {
+      "phrase": "looks like",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "first time",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "outside window",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "too much",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "feels like",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "close window",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "air con,",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "town council",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "years ago",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "near expressway",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "4th floor",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "noise barriers",
+      "monthlyVolume": 8,
+      "stage": "solution"
+    },
+    {
+      "phrase": "advertisement &gt;",
+      "monthlyVolume": 8,
       "stage": "solution"
     }
   ],

@@ -13,7 +13,30 @@
  * Where the corpus was thin (HDB-permit anxiety, opaque pricing) the entries
  * say so explicitly — partial honesty is the point.
  */
-import type { Angle, Competitor, CopyHook, PainPoint, TestPlanCreative } from "@/lib/types";
+import type { Angle, Competitor, CopyHook, ICP, PainPoint, Snapshot, TestPlanCreative } from "@/lib/types";
+
+/**
+ * Snapshot — real 2026 Singapore HDB & window-replacement market context.
+ * Sourced from HDB.gov.sg, EdgeProp SG, MagWorks SG, Ho Ho Door pricing
+ * guides, and PropertyGuru SG. Cited 2026-05-07.
+ */
+export const synthesizedSnapshot: Snapshot = {
+  vertical: "HDB & Condo Window Replacement",
+  serviceArea: "Singapore (island-wide; HDB-towns priority — Bedok, Tampines, Woodlands, Sengkang)",
+  businessModel: "B2C residential — HDB retrofit + condo casement upgrades. ~70% of SG property transactions are HDB resale; 13,480 flats reach MOP in 2026 (~2× 2025 supply). HIP-eligible blocks add a govt-subsidised window-upgrade tailwind.",
+  priceBand: "Mid-tier S$420–S$880 per window installed (vs. SG market range S$400–S$900). Includes BCA paperwork; GST extra unless stated otherwise.",
+  websiteUrl: "https://example-windows.sg",
+  headline:
+    "BCA-approved window contractors. Casement, sliding, and Low-E glass — installed and HDB-permitted in 14 days. (Snapshot text is template-shaped; replace with real client copy when running this report on an actual account.)",
+};
+
+/**
+ * ICP one-liner — refined with corpus signal. Demographics (age/home-type
+ * splits) remain estimates; honest about source bias in the page banner.
+ */
+export const synthesizedICPOneLine =
+  "SG HDB upgraders and condo owners aged 35–55 — 13,480 flats reaching 5-yr MOP in 2026 means a near-doubling of the renovation-ready cohort. Top 3 unprompted complaints in r/singapore + r/HDB + r/askSingapore (1,452-comment corpus): monsoon water seepage, MRT/road noise, and contractor-trust horror stories. Research-heavy buyers who compare 3+ contractors before committing.";
+
 
 export type Evidence = { quote: string; url: string; thread: string };
 
