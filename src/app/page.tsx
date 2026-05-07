@@ -11,6 +11,7 @@ import { Section8TestPlan } from "@/components/sections/Section8TestPlan";
 import { Section9NextActions } from "@/components/sections/Section9NextActions";
 import { DataQualityTable } from "@/components/DataQualityTable";
 import { PrintCoverPage } from "@/components/PrintCoverPage";
+import { ExecSummary } from "@/components/ExecSummary";
 
 const AGENCY_NAME = "OMNI Digital · 15-person agency · alex@omnidigital.com.sg";
 
@@ -53,6 +54,8 @@ export default function Home() {
           Run <code className="font-mono">cd scraper &amp;&amp; bun run scrape:all &amp;&amp; bun run build-report</code> to replace pain points and keywords with real customer language.
         </div>
       )}
+
+      <ExecSummary pains={r.painPoints} angles={r.angles} realCount={realCount} />
 
       <div className="space-y-6">
         <Section1Snapshot snapshot={r.snapshot} />
