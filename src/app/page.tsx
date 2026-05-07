@@ -12,6 +12,7 @@ import { Section9NextActions } from "@/components/sections/Section9NextActions";
 import { DataQualityTable } from "@/components/DataQualityTable";
 import { PrintCoverPage } from "@/components/PrintCoverPage";
 import { ExecSummary } from "@/components/ExecSummary";
+import { Bibliography } from "@/components/Bibliography";
 
 const AGENCY_NAME = "OMNI Digital · 15-person agency · alex@omnidigital.com.sg";
 
@@ -71,6 +72,12 @@ export default function Home() {
 
       <div className="mt-12">
         <DataQualityTable />
+        <Bibliography
+          pressContext={r.pressContext}
+          competitors={r.competitors}
+          evidence={r.painPoints.flatMap((p) => p.evidence ?? [])}
+          copyHookSources={r.copyHooks.flatMap((h) => h.sources ?? [])}
+        />
       </div>
 
       <footer className="mt-16 pt-6 border-t border-[color:var(--card-border)] text-xs font-mono text-[color:var(--muted)] flex flex-wrap gap-x-4 gap-y-1 justify-between">
