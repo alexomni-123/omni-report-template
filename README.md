@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OMNI Report Template
 
-## Getting Started
+> Client-URL → marketing-angle report template. Built for digital marketing agencies who need to produce repeatable, multi-viz "what-should-we-test" reports for new clients in any vertical.
 
-First, run the development server:
+**Live demo:** *(link added after first deploy)*
+
+## What it does
+
+Given a client's website, service area, and a few competitors, this template renders an 8-section marketing-angle report:
+
+1. **Snapshot** — vertical, geo, business model, price band
+2. **Inferred ICP** — age, home/customer type, awareness stage
+3. **Pain Points** — sourced from client copy, reviews, Reddit/Quora, forums; ranked by intensity
+4. **Keyword Phrases** — bucketed by buyer-awareness stage (problem → solution → brand)
+5. **Competitor Angle Teardown** — top 3 SERP rivals: hero hook + offer + proof
+6. **Marketing Angles** — ranked by pain × volume × differentiation, with bubble + radar viz
+7. **Copy Hooks** — 1 headline + 1 opening line per angle, matched to stage
+8. **Test Plan** — first 3 ad creatives recommended to launch
+
+The current `src/data/sample.ts` is a worked example for the **Window Installation** vertical (Greater Toronto Area). Drop in your own report data with the same shape and the page re-renders.
+
+## Stack
+
+- **Next.js 16** (App Router) + React 19
+- **TypeScript**
+- **Tailwind CSS 4** (CSS-first config)
+- **Recharts** for multi-viz charts (pie, horizontal bar, scatter, radar)
+- **lucide-react** for icons
+- **Bun** as package manager / runtime
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bun install
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then visit `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customize
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Replace the report data**: edit `src/data/sample.ts`. The `Report` type is defined in `src/lib/types.ts`.
+- **Re-skin**: edit `src/app/globals.css` — accent color is the `--accent` CSS variable (`#ea580c` by default).
+- **Add/remove sections**: each lives in `src/components/sections/`. The page composition is in `src/app/page.tsx`.
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+This is a vanilla Next.js app — deploys to Vercel with zero configuration:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+vercel deploy --prod
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Or import the repo at [vercel.com/new](https://vercel.com/new).
 
-## Deploy on Vercel
+## Generated with
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[OMNI BRAIN Oracle](https://github.com/alexomni-123/OMNI-AI) — head-coach Oracle for a digital marketing agency. AI-generated content in this template is marked with `[Generated with OMNI BRAIN]` per Oracle Rule 6 (never pretend to be human).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+MIT — fork it, white-label it, ship it.
