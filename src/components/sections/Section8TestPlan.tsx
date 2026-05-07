@@ -1,6 +1,7 @@
 import { SectionShell } from "@/components/SectionShell";
 import type { TestPlanCreative } from "@/lib/types";
 import { Sparkles, Target, Lightbulb, BarChart3 } from "lucide-react";
+import { AdCopyPreview } from "@/components/AdCopyPreview";
 
 type Benchmarks = {
   goodCPL: string;
@@ -92,6 +93,11 @@ export function Section8TestPlan({ plan, benchmarks }: Props) {
           </li>
         ))}
       </ol>
+
+      <p className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)] mt-8 mb-2">
+        Feed-card preview (for client signoff before production)
+      </p>
+      <AdCopyPreview plan={plan} />
     </SectionShell>
   );
 }
