@@ -55,6 +55,7 @@ export type CopyHook = {
   stage: AwarenessStage;
   headline: string;
   openingLine: string;
+  sources?: { url: string; quote: string }[];
 };
 
 export type TestPlanCreative = {

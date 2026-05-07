@@ -242,6 +242,17 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "Putting towels under your window every monsoon? It's not normal.",
     openingLine:
       'A Singaporean homeowner on r/singapore: "splashing water will wet half my kitchen floor even when the rain is not heavy. After a while I gave up and just closed the window all the time." That\'s not the window working. That\'s you giving up.',
+    sources: [
+      {
+        url: "https://reddit.com/r/singapore/comments/1kc2iwy/new_hip_laundry_racks_proudly_highlighted_on_east/mpzj1ih/",
+        quote: "splashing water will wet half my kitchen floor even when the rain is not heavy",
+      },
+      {
+        url: "https://reddit.com/r/askSingapore/comments/1kv8u4u/how_to_adjust_hdb_casement_windows/",
+        quote: "the seal has gotten weaker or the windows have somehow settled",
+      },
+      { url: "https://mothership.sg/2021/01/water-leak-hdb-rain/", quote: "Mothership.sg — HDB seepage in heavy rain (2021)" },
+    ],
   },
   {
     angleId: "mrt-quiet",
@@ -249,6 +260,16 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "If you can hear the 6am MRT in your bedroom, your windows are the cheapest fix.",
     openingLine:
       'From a thread of 200+ Singaporeans living near MRT/expressway: "I rented a place near the expressway before and I hated it. If the noise doesn\'t drive you crazy at night the dust will." One reply stood out: "the developer installed good soundproof windows to block the sound." Yours can do the same.',
+    sources: [
+      {
+        url: "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm65bcw/",
+        quote: "If the noise doesn't drive you crazy at night the dust will",
+      },
+      {
+        url: "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm4z5ph/",
+        quote: "the developer installed good soundproof windows to block the sound",
+      },
+    ],
   },
   {
     angleId: "trust-warranty",
@@ -256,6 +277,16 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "Read the warranty. Most can't.",
     openingLine:
       'CNA reported a Sengkang HDB owner who spent $100,000 trying to fix seepage — "tiling up the walls, four coats of waterproof paint on the ceiling" — and never solved it. The Reddit verdict: "the contractor just wanna make a fast buck." Our warranty names what we cover and what voids it. In writing.',
+    sources: [
+      {
+        url: "https://reddit.com/r/singapore/comments/18x7fwl/water_dripping_from_the_ceiling_even_wet_my_bed/kg2vazh/",
+        quote: "the contractor just wanna make a fast buck",
+      },
+      {
+        url: "https://reddit.com/r/singapore/comments/10yemvm/newly_renoed_flat_waterproofing_leaking/j7xrie9/",
+        quote: "Do not fall for any sympathy acts. I was few k ahead",
+      },
+    ],
   },
   {
     angleId: "aircon-bill",
@@ -263,6 +294,16 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "Your aircon isn't broken. Your windows are leaking heat.",
     openingLine:
       'On r/singapore: "Top floor — really quite warm even with aircon. Maybe newer HDB suffers this more?" The room next to the sun-facing window is the room that costs you on your SP bill. Low-E glass cuts heat gain by ~60% — your aircon runs less, the bedroom is cool by 10pm, your bill drops.',
+    sources: [
+      {
+        url: "https://reddit.com/r/singapore/comments/135axfi/hdb_unit_on_the_top_floor_think_again_says_one/jij0g1o/",
+        quote: "Top floor — really quite warm even with aircon",
+      },
+      {
+        url: "https://reddit.com/r/singapore/comments/1swsnam/the_heat_has_been_rough_in_sg_lately/oiidcwt/",
+        quote: "Most of the heat comes from the sun. You block it you don't need to turn the air-con until very high",
+      },
+    ],
   },
   {
     angleId: "mold-stale-air",
@@ -270,6 +311,12 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "Three weeks away. A mouldy bed. The window was the problem.",
     openingLine:
       'Real comment from r/askSingapore: "We left for 3 weeks once with everything closed and the bed and sheets all were mouldy — had to strip everything down and deep clean." If your window can\'t breathe and seal at the same time, your home does this every monsoon. Casement with proper vents fixes it.',
+    sources: [
+      {
+        url: "https://reddit.com/r/askSingapore/comments/1qt0qpk/leave_windows_open_or_sealed_when_away/o306nyv/",
+        quote: "the bed and sheets all were mouldy — had to strip everything down and deep clean",
+      },
+    ],
   },
   {
     angleId: "hdb-easy",
@@ -277,6 +324,12 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "We file the HDB permit. You don't lift a finger.",
     openingLine:
       "HDB window replacement requires a BCA-licensed contractor and an approved permit — paperwork that drags 6+ weeks if you DIY. We bundle it. You get a date, we get the stamp, the install happens.",
+    sources: [
+      {
+        url: "https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/home-maintenance/home-care-guide/ceiling-leaks",
+        quote: "HDB.gov.sg — window sill/frame seepage is homeowner's responsibility, not town council's",
+      },
+    ],
   },
   {
     angleId: "transparent-quote",
@@ -284,6 +337,7 @@ export const synthesizedCopyHooks: CopyHook[] = [
     headline: "S$420 per window — and we mean S$420 per window.",
     openingLine:
       "No 'site visit fee', no 'debris removal surcharge', no 'after-7pm hoist rate'. The quote includes GST, removal of old units, and the BCA paperwork. The only line that ever changes is if you upgrade glass.",
+    sources: [],
   },
 ];
 
