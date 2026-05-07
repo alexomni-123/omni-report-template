@@ -180,17 +180,15 @@ async function main() {
       priceBand: "—",
       headline: "—",
     },
-    painPoints: pains.map(
-      (p: ClusteredPain) =>
-        ({
-          id: p.id,
-          label: p.label,
-          intensity: p.intensity,
-          sources: p.sources,
-          topPhrases: p.topPhrases,
-          citations: p.citations,
-        })
-    ),
+    painPoints: pains.map((p: ClusteredPain) => ({
+      id: p.id,
+      label: p.label,
+      intensity: p.intensity,
+      sources: p.sources,
+      topPhrases: p.topPhrases,
+      citations: p.citations,
+      sentiment: p.sentiment,
+    })),
     keywords: pickTopKeywords(phrases),
     angles: [], // angles need human curation; left empty until human pass
     competitors: [],

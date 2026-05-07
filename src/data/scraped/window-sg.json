@@ -81,7 +81,27 @@
           "url": "https://reddit.com/r/singapore/comments/my5hvb/a_brand_new_electricbus_for_singapore_the_byd/gvu0x5w/",
           "snippet": "Taking an Aircon bus was a luxury."
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 0.34,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/singapore/comments/eaeg5r/me_field_redditors_advices_needed_for_life/fawo7cy/",
+            "snippet": "This sounds like a waterproofing issue. You might want to take photos of all the water seepage in the house and keep a record.\n\nAlso, do you have the photos of water seepage from few months back. This will be impt for you as the issue starts before DLP ends.\n\nWith regards to air …",
+            "score": 7
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/fpxxrz/why_do_hdb_windows_look_so_ugly/flnkis5/",
+            "snippet": "Ugly in what sense? Also, our windows are kinda similar to Hong Kong's high-rise apartments, so don't be quick to say \"other countries have better windows\".\n\nI guess it's a combination of things like high-rise/high density projects (i.e. must be easy to mass produce + usable at h…",
+            "score": 6
+          },
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1r2r74j/is_my_overpowered_aircon_compressor_the_reason/o4zbncm/",
+            "snippet": "Using the over-sized compressor is less efficient, but not to the point of raising your electricity bill by that extent.\n\nYour idea of adding another small aircon compressor and connecting the bedroom unit is a big job - most air con companies will probably advise you against it.…",
+            "score": 5
+          }
+        ]
+      }
     },
     {
       "id": "seepage",
@@ -148,7 +168,27 @@
           "url": "https://reddit.com/r/singapore/comments/10yemvm/newly_renoed_flat_waterproofing_leaking/",
           "snippet": "Newly reno-ed flat waterproofing leaking, contractor MIA - options?\n\n[Repost](https://www.reddit.com/r/singapore/comments/10yd4gt/newly_renoed_flat_waterproofing_leaking/) but with name and mobile num…"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 1.62,
+        "hotQuotes": [
+          {
+            "url": "https://www.renotalk.com/forum/topic/89620-toilet-water-seepage-after-hdb-hip-home-improvement-programme/#elComment_992281",
+            "snippet": "Looking for help and advise, sorry for the lengthy post. We are living in a type 4A HDB, built around the 80's (we bought resale flat, renovated 100% before moving in about 10 years back). Few days back, my neighbour complaint about water seepage on their master bedroom toilet, b…",
+            "score": 8
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/eaeg5r/me_field_redditors_advices_needed_for_life/fawo7cy/",
+            "snippet": "This sounds like a waterproofing issue. You might want to take photos of all the water seepage in the house and keep a record.\n\nAlso, do you have the photos of water seepage from few months back. This will be impt for you as the issue starts before DLP ends.\n\nWith regards to air …",
+            "score": 7
+          },
+          {
+            "url": "https://www.renotalk.com/forum/topic/79571-plumber-or-contractor-for-leaking-pipe/#elComment_961209",
+            "snippet": "Need some advice here! Water is seeping from 3 spots through my bathroom floor tiles. I noticed it a few days ago. So we switched off the main water supply overnight and the leaking stopped. Once we on the supply the leaking starts. Problem is my whole floor and walls are tiles a…",
+            "score": 6
+          }
+        ]
+      }
     },
     {
       "id": "mold",
@@ -195,7 +235,27 @@
           "url": "https://reddit.com/r/singapore/comments/gh1d5c/is_it_just_me_or_was_today_disgustingly_hot/fq8bhch/",
           "snippet": "It’s awesome that we have rain again this morning but I fear the rest of the day is gonna be humid as hell."
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 0.44,
+        "hotQuotes": [
+          {
+            "url": "https://www.renotalk.com/forum/topic/103366-persistent-toilet-seepage-in-hdb-flat-for-six-months-no-resolution-yet/#elComment_1020036",
+            "snippet": "I am sharing my experience with a constant toilet seepage issue in my HDB flat on the 7th floor. The seepage has been ongoing for six months, and it has caused significant inconvenience and disruption in my daily life. The seepage first appeared in my master bedroom toilet on Feb…",
+            "score": 5
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/eaeg5r/me_field_redditors_advices_needed_for_life/",
+            "snippet": "M&amp;E field Redditors advices needed for life threatening building issues.\n\nUpdate: It seems like my house is going to be out of electricity for today as some workers came for emergency rectification works mentioned that there is nothing much they can do. They're having a hard …",
+            "score": 4
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/1swsnam/the_heat_has_been_rough_in_sg_lately/oiicxad/",
+            "snippet": "The humidity is no joke 😅 This is exactly why wooden kitchen cabinets in SG are a nightmare — they absorb moisture and start warping after a few years. Aluminium doesn't have this problem at all. Slowly seeing more HDB homeowners switch for this reason.",
+            "score": 2
+          }
+        ]
+      }
     },
     {
       "id": "noise",
@@ -234,7 +294,27 @@
           "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm8bh6y/",
           "snippet": "1. Expressway  \n2. 11th  \n3.  See 4.\n4. Got used to it. I have a MSCP blocking direct line of sight to the expressway from my place (higher than the MSCP rooftop, but low enough to be blocked), so dai…"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 1.1,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1r2r74j/is_my_overpowered_aircon_compressor_the_reason/o4zbncm/",
+            "snippet": "Using the over-sized compressor is less efficient, but not to the point of raising your electricity bill by that extent.\n\nYour idea of adding another small aircon compressor and connecting the bedroom unit is a big job - most air con companies will probably advise you against it.…",
+            "score": 5
+          },
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1e1y5kx/help_my_neighbours_are_playing_the_piano_at_7_am/",
+            "snippet": "HELP my neighbours are playing the piano at 7+ am every weekend \n\nmy upstairs neighbour insists on playing the piano from 7 am on weekend mornings.  THEY EVEN SAID ‘WE HAVE ARRANGED FOR CLASSES AT 730 AM ON SATURDAY MORNINGS’. \n\ni’ve gone up to ask nicely that they start slightly…",
+            "score": 5
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/1cxciva/a_small_proof_of_concept_to_stop_cigarette_smoke/",
+            "snippet": "A small proof of concept to stop cigarette smoke from your neighbours\n\nIf you stay in an apartment and your neighbour smokes, some of that cigarette smoke may find its way into your house. This is not ideal. To fight this problem, I propose an automatic window closing system trig…",
+            "score": 4
+          }
+        ]
+      }
     },
     {
       "id": "disruption",
@@ -268,7 +348,27 @@
           "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm74j98/",
           "snippet": "Ya u will get used to the noise. Lots of dust though but it's livable"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 0.35,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gmj8eit/",
+            "snippet": "TL;DR: \n\nNoise - becomes white noise after a while, you will get used to it \nDust - terrible, you’ll need an air purifier and a robo-vacuum \n\nBuying the house: might not be easy to sell in the future because new owners probably cannot tahan the noise. \n\nPositive side, it can be a…",
+            "score": 2
+          },
+          {
+            "url": "https://reddit.com/r/singapore/comments/ld47jh/anyone_staying_near_expressway_or_mrt_track_are/gm65bcw/",
+            "snippet": "I rented a place near the expressway before and I hated it. I stayed at the 7th floor. If the noise doesn't drive you crazy at night the dust will. It is exceptionally dirty and dusty so your windows facing the highway should not be open at all. Trust me you do not want to buy th…",
+            "score": 1
+          },
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1sdtb1g/how_to_handle_neighbour_burning_joss_paper_at/",
+            "snippet": "How to handle neighbour burning joss paper at common corridor below my window?\n\nI recently moved to a HDB unit in AMK with wife and a toddler. My chinese neighbour(corner unit) likes to burn joss paper below my living room window early morning(6 am ish), and at some random times.…",
+            "score": 1
+          }
+        ]
+      }
     },
     {
       "id": "trust",
@@ -302,7 +402,27 @@
           "url": "https://reddit.com/r/askSingapore/comments/1n09wdi/serious_how_does_a_flying_cockroach_fly_out_of_my/napn1pw/",
           "snippet": "I kena before infestation got those pest control it worked and never came back after 2-3weeks. They will recommend where to use those foam spray to fully block drains like kitchen sink or toilet drain…"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 1.4,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/singapore/comments/10yemvm/newly_renoed_flat_waterproofing_leaking/",
+            "snippet": "Newly reno-ed flat waterproofing leaking, contractor MIA - options?\n\n[Repost](https://www.reddit.com/r/singapore/comments/10yd4gt/newly_renoed_flat_waterproofing_leaking/) but with name and mobile number removed.\n\nEnding on a \"high\" note in my reno journey's [sick](https://www.re…",
+            "score": 5
+          },
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1p72dng/how_do_you_deal_with_the_uwu_bird_right_outside/nqv4ct0/",
+            "snippet": "I second this because it really works. I put a Bluetooth speaker near my window facing out and downloaded a uwu bird call from a nature website. Every time the resident koel started uwu-ing at 6am, I would play the recording right back at it, usually resulting in a uwu-off for ab…",
+            "score": 1
+          },
+          {
+            "url": "https://reddit.com/r/askSingapore/comments/1n09wdi/serious_how_does_a_flying_cockroach_fly_out_of_my/napn1pw/",
+            "snippet": "I kena before infestation got those pest control it worked and never came back after 2-3weeks. They will recommend where to use those foam spray to fully block drains like kitchen sink or toilet drain. Stay strong I feel you too. Cockroaches are annoying pest.",
+            "score": 1
+          }
+        ]
+      }
     },
     {
       "id": "hdb-approval",
@@ -320,7 +440,17 @@
           "url": "https://www.renotalk.com/forum/topic/88489-unable-to-change-window-grill/#elComment_989628",
           "snippet": "FYI, PE is Professional Engineer. which part of the grille you want to change? top or bottom of both? the top part seems to be just screwed onto the beam and walls so changing that should not be a pro…"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 2,
+        "hotQuotes": [
+          {
+            "url": "https://www.renotalk.com/forum/topic/88489-unable-to-change-window-grill/#elComment_989628",
+            "snippet": "FYI, PE is Professional Engineer. which part of the grille you want to change? top or bottom of both? the top part seems to be just screwed onto the beam and walls so changing that should not be a problem. the bottom part is cast inside the concrete kerb so you can't change that.…",
+            "score": 2
+          }
+        ]
+      }
     },
     {
       "id": "cost",
@@ -338,7 +468,17 @@
           "url": "https://www.renotalk.com/forum/topic/37075-buying-own-materials-and-engaging-contractor-to-supply-labour-and-project-management/#elComment_600277",
           "snippet": "Thanks gimz, by the way, roughly how much was this \"fair bit\" that you saved? This could help me decide whether its worth my effort or not. hahaa ok...do note the below is for reference only ah... i c…"
         }
-      ]
+      ],
+      "sentiment": {
+        "avgNeg": 1,
+        "hotQuotes": [
+          {
+            "url": "https://www.renotalk.com/forum/topic/37075-buying-own-materials-and-engaging-contractor-to-supply-labour-and-project-management/#elComment_600277",
+            "snippet": "Thanks gimz, by the way, roughly how much was this \"fair bit\" that you saved? This could help me decide whether its worth my effort or not. hahaa ok...do note the below is for reference only ah... i compared quotes between contractor and direct sub con. 1. Carpentry for kitchen -…",
+            "score": 1
+          }
+        ]
+      }
     }
   ],
   "keywords": [

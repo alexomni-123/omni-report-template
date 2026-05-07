@@ -11,8 +11,33 @@ import {
 } from "recharts";
 import { SectionShell } from "@/components/SectionShell";
 import type { PainPoint } from "@/lib/types";
+import { Flame, Snowflake } from "lucide-react";
 
 type Props = { painPoints: PainPoint[] };
+
+function temperatureBadge(avgNeg?: number) {
+  if (avgNeg === undefined || avgNeg === null) return null;
+  if (avgNeg >= 1.0)
+    return {
+      label: "Hot",
+      Icon: Flame,
+      className: "bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-400 border-red-300/40",
+      tooltip: `avg ${avgNeg.toFixed(2)} neg-words/comment — visceral, recently-felt`,
+    };
+  if (avgNeg >= 0.5)
+    return {
+      label: "Warm",
+      Icon: Flame,
+      className: "bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-500 border-amber-300/40",
+      tooltip: `avg ${avgNeg.toFixed(2)} neg-words/comment`,
+    };
+  return {
+    label: "Chronic",
+    Icon: Snowflake,
+    className: "bg-sky-50 dark:bg-sky-900/20 text-sky-700 dark:text-sky-400 border-sky-300/40",
+    tooltip: `avg ${avgNeg.toFixed(2)} neg-words/comment — talked about often, but customers have resigned to it`,
+  };
+}
 
 function intensityColor(v: number) {
   if (v >= 85) return "#dc2626";
@@ -58,24 +83,45 @@ export function Section3PainPoints({ painPoints }: Props) {
         <thead>
           <tr className="text-xs font-mono uppercase tracking-wide text-[color:var(--muted)] border-b border-[color:var(--card-border)]">
             <th className="text-left py-2">Pain</th>
-            <th className="text-right py-2 px-2">Client site</th>
+            <th className="text-left py-2 px-2">Temp</th>
+            <th className="text-right py-2 px-2">Client</th>
             <th className="text-right py-2 px-2">Reviews</th>
             <th className="text-right py-2 px-2">Reddit</th>
             <th className="text-right py-2 px-2">Forums</th>
           </tr>
         </thead>
         <tbody>
-          {sorted.map((p) => (
-            <tr key={p.id} className="border-b border-[color:var(--card-border)]/40">
-              <td className="py-2">{p.label}</td>
-              <td className="text-right py-2 px-2 font-mono">{p.sources.client}</td>
-              <td className="text-right py-2 px-2 font-mono">{p.sources.reviews}</td>
-              <td className="text-right py-2 px-2 font-mono">{p.sources.reddit}</td>
-              <td className="text-right py-2 px-2 font-mono">{p.sources.forums}</td>
-            </tr>
-          ))}
+          {sorted.map((p) => {
+            const t = temperatureBadge(p.sentiment?.avgNeg);
+            return (
+              <tr key={p.id} className="border-b border-[color:var(--card-border)]/40">
+                <td className="py-2">{p.label}</td>
+                <td className="py-2 px-2">
+                  {t && (
+                    <span
+                      title={t.tooltip}
+                      className={`inline-flex items-center gap-1 text-[10px] font-mono uppercase tracking-wide px-1.5 py-0.5 rounded-full border ${t.className}`}
+                    >
+                      <t.Icon className="h-3 w-3" />
+                      {t.label}
+                    </span>
+                  )}
+                </td>
+                <td className="text-right py-2 px-2 font-mono">{p.sources.client}</td>
+                <td className="text-right py-2 px-2 font-mono">{p.sources.reviews}</td>
+                <td className="text-right py-2 px-2 font-mono">{p.sources.reddit}</td>
+                <td className="text-right py-2 px-2 font-mono">{p.sources.forums}</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
+
+      <p className="text-xs text-[color:var(--muted)] mt-3 leading-snug">
+        <strong className="text-[color:var(--foreground)]">Strategic note:</strong> "Hot" pains (avg ≥ 1.0 neg-words/comment) outperform "Chronic" pains in cold-traffic ads.
+        Heat-related complaints are <em>frequent</em> on Reddit but customers have resigned to it (low neg-word density). Seepage and contractor-trust pains are
+        <em> hotter</em> — they still anger customers — and convert better.
+      </p>
 
       {sorted.some((p) => (p.evidence?.length ?? 0) > 0) && (
         <div className="mt-8 space-y-4">

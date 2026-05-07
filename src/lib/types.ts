@@ -24,6 +24,7 @@ export type PainPoint = {
   topPhrases?: { text: string; count: number }[];
   citations?: { url: string; snippet: string }[];
   evidence?: { quote: string; url: string; thread: string }[];
+  sentiment?: { avgNeg: number; hotQuotes: { url: string; snippet: string; score: number }[] };
 };
 
 export type Keyword = {

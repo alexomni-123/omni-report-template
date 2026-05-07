@@ -1,4 +1,5 @@
 import type { Phrase, RawComment, Source } from "../types";
+import { scoreSentiment } from "./sentiment";
 
 /**
  * Cluster phrases into pain-point categories using a manually-curated keyword map.
@@ -21,6 +22,7 @@ export type ClusteredPain = {
   sources: { client: number; reviews: number; reddit: number; forums: number };
   topPhrases: { text: string; count: number }[];
   citations: { url: string; snippet: string }[];
+  sentiment: { avgNeg: number; hotQuotes: { url: string; snippet: string; score: number }[] };
 };
 
 const sourceBucket = (s: Source): keyof ClusteredPain["sources"] => {
@@ -73,6 +75,22 @@ export function clusterPains(
       if (citations.length >= 5) break;
     }
 
+    // Sentiment: score every matching comment; surface the top-3 highest-negative quotes
+    const scored = matchingComments
+      .map((c) => ({
+        url: c.url,
+        snippet: c.body.slice(0, 280) + (c.body.length > 280 ? "…" : ""),
+        score: scoreSentiment(c.body).neg,
+      }))
+      .filter((s) => s.score > 0)
+      .sort((a, b) => b.score - a.score);
+    const hotQuotes = scored.slice(0, 3);
+    const avgNeg =
+      matchingComments.length > 0
+        ? matchingComments.reduce((s, c) => s + scoreSentiment(c.body).neg, 0) /
+          matchingComments.length
+        : 0;
+
     out.push({
       id: cluster.id,
       label: cluster.label,
@@ -80,6 +98,7 @@ export function clusterPains(
       sources,
       topPhrases: matchingPhrases,
       citations,
+      sentiment: { avgNeg: Number(avgNeg.toFixed(2)), hotQuotes },
     });
   }
 
