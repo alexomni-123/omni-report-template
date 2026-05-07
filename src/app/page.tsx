@@ -48,7 +48,7 @@ export default function Home() {
         <Section2ICP icp={r.icp} />
         <Section3PainPoints painPoints={r.painPoints} />
         <Section4Keywords keywords={r.keywords} />
-        <Section5Competitors competitors={r.competitors} />
+        <Section5Competitors competitors={r.competitors} gap={r.competitorGap} />
         <Section6Angles angles={r.angles} />
         <Section7CopyHooks hooks={r.copyHooks} angles={r.angles} />
         <Section8TestPlan plan={r.testPlan} />

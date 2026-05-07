@@ -3,6 +3,8 @@ import { sampleReport } from "./sample";
 import scraped from "./scraped/window-sg.json";
 import {
   synthesizedAngles,
+  synthesizedCompetitorGap,
+  synthesizedCompetitors,
   synthesizedCopyHooks,
   synthesizedPains,
   synthesizedTestPlan,
@@ -47,4 +49,6 @@ export const report = {
   angles: synthesizedAngles.length ? synthesizedAngles : sampleReport.angles,
   copyHooks: synthesizedCopyHooks.length ? synthesizedCopyHooks : sampleReport.copyHooks,
   testPlan: synthesizedTestPlan.length ? synthesizedTestPlan : sampleReport.testPlan,
+  competitors: synthesizedCompetitors.length ? synthesizedCompetitors : sampleReport.competitors,
+  competitorGap: synthesizedCompetitorGap,
 };

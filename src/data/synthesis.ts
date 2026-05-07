@@ -13,7 +13,7 @@
  * Where the corpus was thin (HDB-permit anxiety, opaque pricing) the entries
  * say so explicitly — partial honesty is the point.
  */
-import type { Angle, CopyHook, PainPoint, TestPlanCreative } from "@/lib/types";
+import type { Angle, Competitor, CopyHook, PainPoint, TestPlanCreative } from "@/lib/types";
 
 export type Evidence = { quote: string; url: string; thread: string };
 
@@ -211,6 +211,64 @@ export const synthesizedCopyHooks: CopyHook[] = [
       "No 'site visit fee', no 'debris removal surcharge', no 'after-7pm hoist rate'. The quote includes GST, removal of old units, and the BCA paperwork. The only line that ever changes is if you upgrade glass.",
   },
 ];
+
+/**
+ * Real SG window contractors. Hero hook / offer / proof extracted directly from
+ * each company's homepage on 2026-05-07 via WebFetch. Not invented.
+ *
+ * Picked these three because they represent three distinct positionings —
+ * pricing-led, heritage-led, certification-led — which is the cleanest cohort
+ * for a competitive teardown.
+ */
+export const synthesizedCompetitors: Competitor[] = [
+  {
+    name: "Home Aluminium Metal Works",
+    url: "https://homealuminiumsg.com/",
+    heroHook: "Best HDB Windows & Grilles contractor in Singapore with excellent workmanship.",
+    offer: "Free site survey + no GST on window and grille supply, installation, or replacement.",
+    proof: "Since 2009 · HDB-licensed · BCA-approved · 200+ customer reviews",
+  },
+  {
+    name: "Ho Ho Door",
+    url: "https://www.hohodoorsingapore.com/aluminium-sliding-casement-window",
+    heroHook: "Custom-built aluminium sliding and casement windows designed for Singapore homes.",
+    offer: "Direct factory sales with HDB permit applications included at no extra cost.",
+    proof: "Established 1976 · 49 years in business · HDB + BCA licensed · locally manufactured",
+  },
+  {
+    name: "Top 1 Singapore Safety Window",
+    url: "https://www.top1window.com.sg/",
+    heroHook: "Professional HDB & BCA-certified window contractor delivering high-quality aluminium solutions.",
+    offer: "Direct factory pricing with 7–10 days installation lead time on windows, doors, grilles, and gates.",
+    proof: "Since 2010 · HDB + BCA 3/4 window-certified · 15+ years in business",
+  },
+];
+
+/**
+ * Competitive gap analysis — what the agency's client should NOT do because
+ * everyone else is doing it, and what the gap is.
+ *
+ * Sourced by reading the three competitor homepages above + cross-referencing
+ * against the customer pain language extracted from the 1,452-comment Reddit
+ * corpus.
+ */
+export const synthesizedCompetitorGap = {
+  whatTheyAllSay: [
+    "HDB-licensed / BCA-approved (commodity — table stakes, not differentiation)",
+    "Years in business (1976, 2009, 2010 — heritage as proof)",
+    "Direct factory pricing / free site survey (price-led)",
+    "Custom-built / local manufacturing (process-led)",
+  ],
+  whatCustomersActuallySay: [
+    "Splashing water wets half the kitchen floor — gave up and just close the window",
+    "Newly reno-ed flat waterproofing leaking, contractor MIA",
+    "$100k spent on Sengkang HDB seepage that didn't fix the root cause",
+    "Hearing the 6am MRT through the bedroom window",
+    "Bed and sheets all mouldy after 3 weeks away with windows closed",
+  ],
+  theGap:
+    "Every visible competitor leads with credentials and pricing. Zero of them speak to the three pains the corpus screams about: seepage, noise, and post-install contractor abandonment. The agency's client wins by being the first to lead with pain language — 'no more towels under the window', 'we don't disappear', 'sleep through the MRT' — and parking the credentials at the bottom as proof, not as the hook.",
+};
 
 export const synthesizedTestPlan: TestPlanCreative[] = [
   {
