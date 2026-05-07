@@ -28,7 +28,7 @@ export default function Home() {
 
       <footer className="mt-16 pt-6 border-t border-[color:var(--card-border)] text-xs font-mono text-[color:var(--muted)] flex flex-wrap gap-x-4 gap-y-1 justify-between">
         <span>OMNI Report Template · v0.1</span>
-        <span>Sample data — Window Installation vertical, GTA</span>
+        <span>Sample data — HDB &amp; Condo Window Replacement, Singapore</span>
         <span>[Generated with {r.generatedBy}]</span>
       </footer>
     </main>

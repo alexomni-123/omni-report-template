@@ -17,7 +17,7 @@ Given a client's website, service area, and a few competitors, this template ren
 7. **Copy Hooks** — 1 headline + 1 opening line per angle, matched to stage
 8. **Test Plan** — first 3 ad creatives recommended to launch
 
-The current `src/data/sample.ts` is a worked example for the **Window Installation** vertical (Greater Toronto Area). Drop in your own report data with the same shape and the page re-renders.
+The current `src/data/sample.ts` is a worked example for the **HDB & Condo Window Replacement** vertical in Singapore — pain points are climate-/housing-specific (monsoon seepage, MRT noise, aircon-bill heat gain, HDB permit anxiety), and angles are tuned for Meta + TikTok geo-targeted by HDB town. Drop in your own report data with the same shape and the page re-renders.
 
 ## Stack
 
