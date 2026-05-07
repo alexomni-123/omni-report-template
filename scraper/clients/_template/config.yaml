@@ -81,5 +81,7 @@ nlp:
     - how
 
 output:
-  reportPath: "../src/data/scraped/CLIENT-SLUG.json"
-  rawPath: "./output/raw/CLIENT-SLUG/"
+  # Paths are resolved relative to this config file's location.
+  # From scraper/clients/<slug>/config.yaml, ../../ reaches the repo root.
+  reportPath: "../../../src/data/scraped/CLIENT-SLUG.json"
+  rawPath: "../../output/raw-CLIENT-SLUG/"

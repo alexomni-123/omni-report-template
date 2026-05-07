@@ -142,19 +142,24 @@ async function main() {
   const cfgPath = process.argv[2] ?? "config.yaml";
   const cfg = await loadConfig(cfgPath);
 
-  const rawDir = cfg.output.rawPath;
+  const rawDir = join(dirname(cfgPath), cfg.output.rawPath);
   const all = await loadRawComments(rawDir);
   console.log(`build-report: ${all.length} comments loaded from ${rawDir}`);
 
-  // Topic filter: Reddit's relevance ranking sometimes returns popular off-topic
-  // threads when the query has no strong match. Drop comments whose thread title
-  // doesn't mention any window-related vocabulary.
-  const topicRe =
-    /\b(window|casement|sliding|glaz|seepage|leak|aircon|aluminum|aluminium|upvc|frame|hdb\s*reno|reno(vation)?|noise|insulat|sound[- ]?proof|rain|monsoon|mou?ld|condensation)\b/i;
+  // Topic filter: derive from the vertical's clusters so it generalizes —
+  // a comment is "on topic" if it matches any cluster regex OR if its thread
+  // title does. Falls back to the previous SG-window topic regex when clusters
+  // aren't yet loaded (defensive).
+  const clustersKey = cfg.clustersKey ?? "window-sg";
+  const clusters = CLUSTERS_BY_VERTICAL[clustersKey];
+  if (!clusters) {
+    console.error(`! unknown clustersKey "${clustersKey}". Available: ${Object.keys(CLUSTERS_BY_VERTICAL).join(", ")}`);
+    process.exit(1);
+  }
+  const onTopic = (text: string) => clusters.some((c) => c.matchers.some((re) => re.test(text)));
   const comments = all.filter((c) => {
     const title = c.context?.threadTitle ?? "";
-    if (!title) return true; // keep if no title metadata (defensive)
-    return topicRe.test(title) || topicRe.test(c.body);
+    return onTopic(c.body) || (title && onTopic(title));
   });
   console.log(`build-report: ${comments.length} on-topic comments after filter`);
 
@@ -166,12 +171,6 @@ async function main() {
   const phrases = extractPhrases(comments, cfg.nlp);
   console.log(`build-report: ${phrases.length} candidate phrases (occ ≥ ${cfg.nlp.minOccurrences})`);
 
-  const clustersKey = cfg.clustersKey ?? "window-sg";
-  const clusters = CLUSTERS_BY_VERTICAL[clustersKey];
-  if (!clusters) {
-    console.error(`! unknown clustersKey "${clustersKey}". Available: ${Object.keys(CLUSTERS_BY_VERTICAL).join(", ")}`);
-    process.exit(1);
-  }
   console.log(`build-report: clustering with "${clustersKey}" (${clusters.length} clusters)`);
   const pains = clusterPains(phrases, comments, clusters);
 

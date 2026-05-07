@@ -1,0 +1,803 @@
+{
+  "generatedAt": "2026-05-07",
+  "generatedBy": "OMNI BRAIN Oracle (real-data scrape)",
+  "isRealData": true,
+  "sourceTotals": {
+    "reddit": 3028
+  },
+  "snapshot": {
+    "vertical": "DTC Skincare for Sensitive / Acne-prone Skin",
+    "serviceArea": "Singapore + Malaysia (e-commerce, SG-warehoused)",
+    "websiteUrl": "https://example-skincare.sg",
+    "businessModel": "—",
+    "priceBand": "—",
+    "headline": "—"
+  },
+  "painPoints": [
+    {
+      "id": "acne",
+      "label": "Persistent acne / breakouts",
+      "intensity": 100,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 572,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "cystic acne",
+          "count": 147
+        },
+        {
+          "text": "hormonal acne",
+          "count": 78
+        },
+        {
+          "text": "my acne",
+          "count": 67
+        },
+        {
+          "text": "acne prone",
+          "count": 33
+        },
+        {
+          "text": "cystic acne.",
+          "count": 29
+        },
+        {
+          "text": "adult acne",
+          "count": 25
+        },
+        {
+          "text": "the acne",
+          "count": 18
+        },
+        {
+          "text": "acne scars",
+          "count": 18
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/",
+          "snippet": "Anyone do this too? [2026 Stockpile]\n\nIntro: I took this pic because I found myself wanting to buy so much back in december because of all the sales. But obviously, I only have one face, products have…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2xekbs/",
+          "snippet": "I've been using the pky ato blue label moisturiser for about a month and a half now. I have the same skin type as you and am also in a humid climate so I'll probably be stealing some of your recs. \n\nI…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1q5plu/",
+          "snippet": "**Skin type:** Oily, Dehydrated, Eczema, CC prone, PIH\n\n**Climate:** Tropical SEA\n\nAltho I already live in a tropical climate, sometimes the weather varies as well. Currently, it's the 'Summer' time i…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1qebnb/",
+          "snippet": "skin: combination, PIH, hormonal acne prone\nclimate: tropical 24/7\n\n* krave matcha hydrating cleanser: so so SO good. i've never been obsessed with any cleanser until this one - it's so gentle, hydrat…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1rfcov/",
+          "snippet": "My skin is pretty oily and acne prone and whilst I don’t live in a tropical climate anymore, my HG recommendations have to be the innisfree no sebum mineral powder which is so good for getting rid of …"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.55,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/frinvka/",
+            "snippet": "I'm 33 with sensitive skin and redness. I had Terrible acne growing up and never learned how to properly care for my skin. I'm going to give you far to many details 😅. I have spent so much money on on hair care, skin care, and lotions to only be allergic to a lot of the stuff on…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/SkincareAddiction/comments/1hotqhf/acne_heres_what_you_need_to_know_about_post/",
+            "snippet": "[Acne] Here’s what you need to know about Post Inflammatory Erythema (which looks like acne scars)\n\nHi, \n\nAre you tired of looking like a teenager with red skin, but your anti-acne skincare routine doesn’t bring any results at all? Well, it might not be acne or acne scars - it mi…",
+            "score": 8
+          },
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/hvl9am/review_im_from_skincare_products_sensitive_skin/",
+            "snippet": "[Review] I'm From Skincare Products - Sensitive Skin\n\nHey everyone! I'm a big fan of I'm From products so I thought I'd give a review of everything I've used thus far for anyone who's thinking of purchasing them. Feel free to ask any questions or add your own review below. I have…",
+            "score": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "humidity",
+      "label": "Tropical humidity / oily T-zone",
+      "intensity": 96,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 434,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "oily skin.",
+          "count": 27
+        },
+        {
+          "text": "oily skin",
+          "count": 21
+        },
+        {
+          "text": "cleansing oil",
+          "count": 18
+        },
+        {
+          "text": "hot humid",
+          "count": 15
+        },
+        {
+          "text": "oil control",
+          "count": 13
+        },
+        {
+          "text": "tropical climate",
+          "count": 13
+        },
+        {
+          "text": "coconut oil",
+          "count": 13
+        },
+        {
+          "text": "oily skin,",
+          "count": 12
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/",
+          "snippet": "Anyone do this too? [2026 Stockpile]\n\nIntro: I took this pic because I found myself wanting to buy so much back in december because of all the sales. But obviously, I only have one face, products have…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2r39yr/",
+          "snippet": "So the pic in the post is of my current stockpile that I need to use up this year before buying anything else. As mentioned in the post body, I'll add my current routine below:   \n  \nAM:  \nwash face w…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2ry973/",
+          "snippet": "I use to be like u &amp; stockpile whenever there was a sale on but this year, I’ve made a promise to use up what I have first before splurging. I’ve found my HG’s &amp; will repurchase the same produ…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2sktex/",
+          "snippet": "thank you! i love looking at people’s hauls and empties too~ especially those with my skin type. \noh yeah, it’s my first time using the kose softymo cleansing oil too. definitely understand the hype n…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2xekbs/",
+          "snippet": "I've been using the pky ato blue label moisturiser for about a month and a half now. I have the same skin type as you and am also in a humid climate so I'll probably be stealing some of your recs. \n\nI…"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.53,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/ah7gkp/review_half_a_year_of_skincare_as_a_beginner/",
+            "snippet": "[Review] Half a year of skincare as a beginner\n\nLast year, I turned a certain age and decided that it was time for me to actually start taking care of my skin. Generally, my family buys whatever brand is expensive for their skincare and just gets the whole line. As good as they a…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/",
+            "snippet": "Feeling discouraged and stuck because of my budget and my stupidly sensitive skin\n\nUpdate: I’ve been babying my skin since then. If I wear sunscreen, I oil cleanse (with olive, avocado, and jojoba oils) and then either just use slightly warm water to rinse well (while gently rubb…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/frinvka/",
+            "snippet": "I'm 33 with sensitive skin and redness. I had Terrible acne growing up and never learned how to properly care for my skin. I'm going to give you far to many details 😅. I have spent so much money on on hair care, skin care, and lotions to only be allergic to a lot of the stuff on…",
+            "score": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "sensitive",
+      "label": "Sensitive / reactive skin",
+      "intensity": 91,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 323,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "sensitive skin.",
+          "count": 64
+        },
+        {
+          "text": "sensitive skin",
+          "count": 53
+        },
+        {
+          "text": "sensitive skin,",
+          "count": 37
+        },
+        {
+          "text": "allergic reaction",
+          "count": 20
+        },
+        {
+          "text": "an allergic reaction",
+          "count": 9
+        },
+        {
+          "text": "[rosacea wiki](",
+          "count": 8
+        },
+        {
+          "text": "sensitive skin?",
+          "count": 7
+        },
+        {
+          "text": "an allergy",
+          "count": 7
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2rdfof/",
+          "snippet": "Planning to buy banila co too, ano mas okay for dry sensitive skin? The pink or blue one?"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1q5plu/",
+          "snippet": "**Skin type:** Oily, Dehydrated, Eczema, CC prone, PIH\n\n**Climate:** Tropical SEA\n\nAltho I already live in a tropical climate, sometimes the weather varies as well. Currently, it's the 'Summer' time i…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qnb1r7/2025_empties/o1tfhhj/",
+          "snippet": "I don’t like exfoliating toner—but I love enzyme washes. I use Susai. If your barrier is healthy and you arent too dry, get the blue. If you are super dry, or have irritated skin, or super sensitive s…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qnb1r7/2025_empties/o1uc0ms/",
+          "snippet": "Hi OP pretty much we have the same skin condition as well as the weather of where we live. I am allergic to niacinamide as well.\nBut this exfoliating toner does not break me out (use every other day o…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qnb1r7/2025_empties/o1ugq0l/",
+          "snippet": "omg! thank youuu for your recs! im not sure whether to high-five you or cry-laugh with you with our allergy to niacinamide. so many anti-aging products keep using niacinamide these days *facepalm*\ni c…"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.64,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/",
+            "snippet": "Feeling discouraged and stuck because of my budget and my stupidly sensitive skin\n\nUpdate: I’ve been babying my skin since then. If I wear sunscreen, I oil cleanse (with olive, avocado, and jojoba oils) and then either just use slightly warm water to rinse well (while gently rubb…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/frinvka/",
+            "snippet": "I'm 33 with sensitive skin and redness. I had Terrible acne growing up and never learned how to properly care for my skin. I'm going to give you far to many details 😅. I have spent so much money on on hair care, skin care, and lotions to only be allergic to a lot of the stuff on…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/SkincareAddiction/comments/1hotqhf/acne_heres_what_you_need_to_know_about_post/",
+            "snippet": "[Acne] Here’s what you need to know about Post Inflammatory Erythema (which looks like acne scars)\n\nHi, \n\nAre you tired of looking like a teenager with red skin, but your anti-acne skincare routine doesn’t bring any results at all? Well, it might not be acne or acne scars - it mi…",
+            "score": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "pigmentation",
+      "label": "Dark spots / pigmentation / acne scars",
+      "intensity": 85,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 225,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "[hyperpigmentation wiki](",
+          "count": 14
+        },
+        {
+          "text": "dark spot",
+          "count": 11
+        },
+        {
+          "text": "my pih",
+          "count": 8
+        },
+        {
+          "text": "about hyperpigmentation",
+          "count": 7
+        },
+        {
+          "text": "hyperpigmentation post",
+          "count": 7
+        },
+        {
+          "text": "our [hyperpigmentation",
+          "count": 7
+        },
+        {
+          "text": "information about hyperpigmentation",
+          "count": 7
+        },
+        {
+          "text": "about hyperpigmentation post",
+          "count": 7
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o34c3ly/",
+          "snippet": "u/seijurogouu do you have any recomendations for hyperpigmentation or dark spots - I have similar skin to you! \n\nSo curious about the cleansing oil and banila co cleansing balm. Currently using Isntre…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1q5plu/",
+          "snippet": "**Skin type:** Oily, Dehydrated, Eczema, CC prone, PIH\n\n**Climate:** Tropical SEA\n\nAltho I already live in a tropical climate, sometimes the weather varies as well. Currently, it's the 'Summer' time i…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1qebnb/",
+          "snippet": "skin: combination, PIH, hormonal acne prone\nclimate: tropical 24/7\n\n* krave matcha hydrating cleanser: so so SO good. i've never been obsessed with any cleanser until this one - it's so gentle, hydrat…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1c26mfr/my_eid_makeup_routine_in_tropical_climate_during/",
+          "snippet": "My Eid Makeup Routine in Tropical Climate (during 'Summer')\n\nTo those who celebrate, Happy Eid Mubarak! \n\nI've always wanted to share what my makeup routine have always been during Eid as the weather …"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1c26mfr/my_eid_makeup_routine_in_tropical_climate_during/kz7zull/",
+          "snippet": "Oh I forgot to add more info.\n\nSkintone: Medium Warm Olive. Can't say what's my other foundation shades matches since this is the first time I found an exact shade match from the Maybelline powder fou…"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.43,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/SkincareAddiction/comments/1hotqhf/acne_heres_what_you_need_to_know_about_post/",
+            "snippet": "[Acne] Here’s what you need to know about Post Inflammatory Erythema (which looks like acne scars)\n\nHi, \n\nAre you tired of looking like a teenager with red skin, but your anti-acne skincare routine doesn’t bring any results at all? Well, it might not be acne or acne scars - it mi…",
+            "score": 8
+          },
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/hvl9am/review_im_from_skincare_products_sensitive_skin/",
+            "snippet": "[Review] I'm From Skincare Products - Sensitive Skin\n\nHey everyone! I'm a big fan of I'm From products so I thought I'd give a review of everything I've used thus far for anyone who's thinking of purchasing them. Feel free to ask any questions or add your own review below. I have…",
+            "score": 7
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/1kpy3j8/spent_30k_on_lasersskincare_here_are_my_hacks_and/",
+            "snippet": "Spent 30k+ On Lasers/Skincare - Here are My Hacks and Takeaways\n\nHi guys! \n*For title it should be Lasers/Skincare/Beauty Hacks\n*I have tan skin so lasers are a bit complicated due to risk of hyperpigmentation I.e. IPL not mentioned\n\nDISCLAIMER: PLEASE double check this with the …",
+            "score": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "cost",
+      "label": "Premium-skincare price fatigue",
+      "intensity": 82,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 176,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "too much",
+          "count": 56
+        },
+        {
+          "text": "too much.",
+          "count": 9
+        },
+        {
+          "text": "more expensive",
+          "count": 8
+        },
+        {
+          "text": "a dupe",
+          "count": 7
+        },
+        {
+          "text": "it’s expensive",
+          "count": 5
+        },
+        {
+          "text": "use too much",
+          "count": 5
+        },
+        {
+          "text": "budget friendly",
+          "count": 4
+        },
+        {
+          "text": "way too much",
+          "count": 4
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2rghed/",
+          "snippet": "Just came back from a 2 week Japan trip and I stocked up on sunscreens (mainly Skin Aqua, and Nivea) got a bunch of face masks (Lululun, Quality First, that one famous fermented rice water mask, 8 hou…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2r9xdf/",
+          "snippet": "I want to try the Banila Co and Matsuyiko at some point since they’re easily found where I am. But, I’m still trying to figure out if cleansing oils and balms that I’m using are clogging my pores, or …"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1wryj4/",
+          "snippet": "I mainly buy the Illiyoon either from Shopee or Tiktok shops (tend to get the best deals!). You may sometimes find the Illiyoon in Watsons stores but not all. It really depends 😅. But of course the p…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qnb1r7/2025_empties/",
+          "snippet": "2025 Empties\n\nIntro: From age 15-30ish, I had a basic routine.  \nAM: water wash face, moisturizer, make up  \nPM: 2-step cleanse, moisturizer  \nThen my skin changed, became more dry and started having …"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qnb1r7/2025_empties/o1uao81/",
+          "snippet": "great question! i layer the lotion (toner) first too and basically use the emulsion as a lightweight moisturizer in the morning for stay at home days. like this…\nwash face with water &gt; hatomugi lot…"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 1.22,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/ah7gkp/review_half_a_year_of_skincare_as_a_beginner/",
+            "snippet": "[Review] Half a year of skincare as a beginner\n\nLast year, I turned a certain age and decided that it was time for me to actually start taking care of my skin. Generally, my family buys whatever brand is expensive for their skincare and just gets the whole line. As good as they a…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/",
+            "snippet": "Feeling discouraged and stuck because of my budget and my stupidly sensitive skin\n\nUpdate: I’ve been babying my skin since then. If I wear sunscreen, I oil cleanse (with olive, avocado, and jojoba oils) and then either just use slightly warm water to rinse well (while gently rubb…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/frinvka/",
+            "snippet": "I'm 33 with sensitive skin and redness. I had Terrible acne growing up and never learned how to properly care for my skin. I'm going to give you far to many details 😅. I have spent so much money on on hair care, skin care, and lotions to only be allergic to a lot of the stuff on…",
+            "score": 10
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunburn",
+      "label": "Sun damage / SPF concerns",
+      "intensity": 78,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 142,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "sun damage,",
+          "count": 4
+        },
+        {
+          "text": "the uv index",
+          "count": 3
+        },
+        {
+          "text": "sunscreen recommendations without white cast,",
+          "count": 3
+        },
+        {
+          "text": "repairs sun damage,",
+          "count": 3
+        },
+        {
+          "text": "sun damage",
+          "count": 3
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/",
+          "snippet": "Anyone do this too? [2026 Stockpile]\n\nIntro: I took this pic because I found myself wanting to buy so much back in december because of all the sales. But obviously, I only have one face, products have…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2r39yr/",
+          "snippet": "So the pic in the post is of my current stockpile that I need to use up this year before buying anything else. As mentioned in the post body, I'll add my current routine below:   \n  \nAM:  \nwash face w…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1qrvjoa/anyone_do_this_too_2026_stockpile/o2s0fbh/",
+          "snippet": "Can you confirm if no whitecast for biore uv tone up sunscreen?"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1q5plu/",
+          "snippet": "**Skin type:** Oily, Dehydrated, Eczema, CC prone, PIH\n\n**Climate:** Tropical SEA\n\nAltho I already live in a tropical climate, sometimes the weather varies as well. Currently, it's the 'Summer' time i…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1cffssa/best_hg_products_for_tropicalhumid_climates/l1rl9q1/",
+          "snippet": "Too bad that makeup base didn’t work for you.  Cezanne UV Clear Face Powder in 00- perfectly neutral for me!"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.7,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/ah7gkp/review_half_a_year_of_skincare_as_a_beginner/",
+            "snippet": "[Review] Half a year of skincare as a beginner\n\nLast year, I turned a certain age and decided that it was time for me to actually start taking care of my skin. Generally, my family buys whatever brand is expensive for their skincare and just gets the whole line. As good as they a…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/gokgqq/feeling_discouraged_and_stuck_because_of_my/",
+            "snippet": "Feeling discouraged and stuck because of my budget and my stupidly sensitive skin\n\nUpdate: I’ve been babying my skin since then. If I wear sunscreen, I oil cleanse (with olive, avocado, and jojoba oils) and then either just use slightly warm water to rinse well (while gently rubb…",
+            "score": 10
+          },
+          {
+            "url": "https://reddit.com/r/SkincareAddiction/comments/1h4u6lu/best_worst_skincare_products_ive_tried_review/",
+            "snippet": "Best &amp; Worst Skincare Products I’ve tried [review]\n\nLittle bit about me/my skin: Im 25F and I have sensitive, acne prone, combination skin. My skin is especially sensitive to fragrance, citrus and floral essential oils. Because of this I’ve become a bit of a skincare nerd and…",
+            "score": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "ingredient-confusion",
+      "label": "Ingredient confusion / regimen anxiety",
+      "intensity": 52,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 27,
+        "forums": 0
+      },
+      "topPhrases": [
+        {
+          "text": "skincare routine? best place start",
+          "count": 13
+        }
+      ],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/2jcss2/asian_skincare_101_a_beginners_guide_faq/",
+          "snippet": "Asian Skincare 101: A Beginner’s Guide &amp; FAQ\n\nSo you’re interested in Asian skincare, but you don’t know where to begin.\n\n##The Philosophy \n\nThere is a lot of buzz around the concept of Asian skin…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/52ijtj/beginner_to_skin_care_routine_overwhelmed_but/",
+          "snippet": "Beginner to skin care routine, overwhelmed but thankful.\n\nLadies + gents? Ha\n\nI found out about AB last week and I have been reading through the side bar the past three days. I'm overwhelmed with info…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/52ijtj/beginner_to_skin_care_routine_overwhelmed_but/d7lg5wi/",
+          "snippet": "Honestly, you may be overwhelmed with the vast amount of information on skin and what is needed for specific skin types. But this is a step in the right direction! It is never too late for a lifestyle…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/ioot09/beginnerfriendly_review_of_a_few_cult_favorite/g4g4t45/",
+          "snippet": "I was similarly unimpressed by bha power liquid and then bummed that I had 2/3 of a big bottle of something I don’t want to use. It did literally nothing for my face, but I now use it after shaving bi…"
+        },
+        {
+          "url": "https://reddit.com/r/SkincareAddiction/comments/knoc8n/routine_help_skincare_for_tropical_climate/",
+          "snippet": "[Routine Help] Skincare for tropical climate\n\nI’m a f/28, have pretty healthy skin overall, and don’t use foundation or any face cream. I don’t have a skincare routine besides a facial cleanser in the…"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 0.48,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/1q9fprm/lancome_estee_lauder_etc_and_other_prestige/",
+            "snippet": "Lancome, Estee Lauder, etc. and other prestige brands, still popular in 2026? Your shelf?\n\nBetween \\~2002-2014 I was an Estee Lauder devotee despite being younger with a limited beauty budget because--at least in Canada--there were not many options back then like there are now wi…",
+            "score": 5
+          },
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/2jcss2/asian_skincare_101_a_beginners_guide_faq/",
+            "snippet": "Asian Skincare 101: A Beginner’s Guide &amp; FAQ\n\nSo you’re interested in Asian skincare, but you don’t know where to begin.\n\n##The Philosophy \n\nThere is a lot of buzz around the concept of Asian skincare, and a lot of confusion. Most articles about it focus on the high number of…",
+            "score": 3
+          },
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/52ijtj/beginner_to_skin_care_routine_overwhelmed_but/",
+            "snippet": "Beginner to skin care routine, overwhelmed but thankful.\n\nLadies + gents? Ha\n\nI found out about AB last week and I have been reading through the side bar the past three days. I'm overwhelmed with information, products and a lot of technicality. But im plowing through and going to…",
+            "score": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "trust-greenwash",
+      "label": "Greenwashing / influencer-trust fatigue",
+      "intensity": 46,
+      "sources": {
+        "client": 0,
+        "reviews": 0,
+        "reddit": 18,
+        "forums": 0
+      },
+      "topPhrases": [],
+      "citations": [
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1c26mfr/my_eid_makeup_routine_in_tropical_climate_during/kz8tdlc/",
+          "snippet": "Thank you! \n\nI actually learned the technique from beauty guru Jackie Aina. So I thought with the Innisfree powder it might work since it's incredibly finely milled. You can try look up some of her vi…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1sjj5hq/body_moisturising_in_high_humidity_heat_recs_for/",
+          "snippet": "Body moisturising in high humidity &amp; heat recs for sensitive skin?\n\nIn the past I didn't run so hot and where I live (the UK) wasn't as hot and humid so I could repurpose things. Also my tolerance…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/hvl9am/review_im_from_skincare_products_sensitive_skin/",
+          "snippet": "[Review] I'm From Skincare Products - Sensitive Skin\n\nHey everyone! I'm a big fan of I'm From products so I thought I'd give a review of everything I've used thus far for anyone who's thinking of purc…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1kav7un/update_and_moisturizer_minireviews_aestura/",
+          "snippet": "Update and Moisturizer Mini-Reviews: Aestura Atobarrier 365 Cream Review, 10 months later\n\nHi all. About 10 months ago I posted [this review](https://www.reddit.com/r/AsianBeauty/comments/1e1mtpg/refo…"
+        },
+        {
+          "url": "https://reddit.com/r/AsianBeauty/comments/1kav7un/update_and_moisturizer_minireviews_aestura/n4lozrn/",
+          "snippet": "&gt;Do you still think I got a fake or bad batch despite ordering from Aestura's official retailer? Please let me know!\n\nIt's entirely possible. Amazon's questionable inventory practices mean that it …"
+        }
+      ],
+      "sentiment": {
+        "avgNeg": 2.22,
+        "hotQuotes": [
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/hvl9am/review_im_from_skincare_products_sensitive_skin/",
+            "snippet": "[Review] I'm From Skincare Products - Sensitive Skin\n\nHey everyone! I'm a big fan of I'm From products so I thought I'd give a review of everything I've used thus far for anyone who's thinking of purchasing them. Feel free to ask any questions or add your own review below. I have…",
+            "score": 7
+          },
+          {
+            "url": "https://reddit.com/r/30PlusSkinCare/comments/1kpy3j8/spent_30k_on_lasersskincare_here_are_my_hacks_and/",
+            "snippet": "Spent 30k+ On Lasers/Skincare - Here are My Hacks and Takeaways\n\nHi guys! \n*For title it should be Lasers/Skincare/Beauty Hacks\n*I have tan skin so lasers are a bit complicated due to risk of hyperpigmentation I.e. IPL not mentioned\n\nDISCLAIMER: PLEASE double check this with the …",
+            "score": 7
+          },
+          {
+            "url": "https://reddit.com/r/AsianBeauty/comments/34rts1/longtime_lurker_here_just_wanted_to_share_my/",
+            "snippet": "Long-time lurker here, just wanted to share my experience and how I cleared my acne (inside out)\n\nWARNING: LONG!!!\n\nHello! I've been a long time lurker here in this forum and made an account so that I could share my own experience in dealing with adult acne and how I overcame it.…",
+            "score": 6
+          }
+        ]
+      }
+    }
+  ],
+  "keywords": [
+    {
+      "phrase": "cystic acne",
+      "monthlyVolume": 147,
+      "stage": "solution"
+    },
+    {
+      "phrase": "white cast",
+      "monthlyVolume": 83,
+      "stage": "solution"
+    },
+    {
+      "phrase": "feel like",
+      "monthlyVolume": 81,
+      "stage": "solution"
+    },
+    {
+      "phrase": "hormonal acne",
+      "monthlyVolume": 78,
+      "stage": "solution"
+    },
+    {
+      "phrase": "been using",
+      "monthlyVolume": 73,
+      "stage": "solution"
+    },
+    {
+      "phrase": "azelaic acid",
+      "monthlyVolume": 72,
+      "stage": "solution"
+    },
+    {
+      "phrase": "thank you!",
+      "monthlyVolume": 69,
+      "stage": "solution"
+    },
+    {
+      "phrase": "sensitive skin.",
+      "monthlyVolume": 64,
+      "stage": "solution"
+    },
+    {
+      "phrase": "hyaluronic acid",
+      "monthlyVolume": 62,
+      "stage": "solution"
+    },
+    {
+      "phrase": "and this action",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "this subreddit](/message/compose/?to=/ )",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "bot, action",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "action performed",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "performed automatically.",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "automatically. please",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "please [contact",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "[contact moderators",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "moderators subreddit](/message/compose/?to=/",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "subreddit](/message/compose/?to=/ any",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "questions concerns.*",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "bot, action performed",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "action performed automatically.",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "performed automatically. please",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "automatically. please [contact",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "please [contact moderators",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "[contact moderators subreddit](/message/compose/?to=/",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "moderators subreddit](/message/compose/?to=/ any",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "subreddit](/message/compose/?to=/ any questions",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "bot, action performed automatically.",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    },
+    {
+      "phrase": "action performed automatically. please",
+      "monthlyVolume": 60,
+      "stage": "solution"
+    }
+  ],
+  "angles": [],
+  "competitors": [],
+  "copyHooks": [],
+  "testPlan": [],
+  "icp": {
+    "ageBuckets": [],
+    "homeTypes": [],
+    "urgency": [],
+    "oneLine": "Awaiting human triangulation against ad-platform demographics."
+  }
+}

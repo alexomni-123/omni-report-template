@@ -87,5 +87,6 @@ nlp:
     - product
 
 output:
-  reportPath: "../src/data/scraped/skincare-sg.json"
-  rawPath: "./output/raw-skincare/"
+  # paths resolved relative to this config file
+  reportPath: "../../../src/data/scraped/skincare-sg.json"
+  rawPath: "../../output/raw-skincare/"
