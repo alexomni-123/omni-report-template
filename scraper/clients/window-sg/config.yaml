@@ -75,5 +75,6 @@ nlp:
     - how
 
 output:
-  reportPath: "../src/data/scraped/window-sg.json"
-  rawPath: "./output/raw/"
+  # paths resolved relative to this config file
+  reportPath: "../../../src/data/scraped/window-sg.json"
+  rawPath: "../../output/raw/"

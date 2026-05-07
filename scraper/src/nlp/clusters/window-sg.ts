@@ -1,6 +1,19 @@
 import type { PainCluster } from "../cluster-pains";
 
 /**
+ * Vertical-specific stage classifier. The build-report keyword section
+ * uses these to label each extracted phrase as problem / solution / brand.
+ */
+export const windowSgStageMatchers = {
+  problem:
+    /\b(leak(y|ing|s)?|noisy|loud|noise\s*pollution|mou?ld(y)?|mildew|condensation|seep(age|ing)?|drip|drafty|stuffy|sleep(less)?|insomnia|cant\s*sleep|cannot\s*sleep|wake\s*up|woken|disturb(ed|ing)?|bill\s*(high|expensive|crazy|insane)|too\s*(hot|loud|noisy|expensive|warm)|complain|frustrat|annoy|stuck|broken|jam(med)?|cracked?|rotten|rust(ed|ing)?|hate|terrible|awful|nightmare|disgust(ing)?|water\s*(in|inside|leak|seep)|rain\s*(coming|getting|comes|hits|in)|aircon\s*(bill|cost|crazy|broken|24)|electric(ity)?\s*bill|ugly|dated|old|worn|disrepair|deterior|gave\s*up)\b/i,
+  brand:
+    /\b(home\s*aluminium|hoho|ho\s*ho\s*door|top\s*1\s*window|panemart|clearshield|winsam|reviews?|recommend(ed)?|best\s*(contractor|window|installer)|reputable|trustworthy|legit|vs\.?\s*\w|compared\s*to|which\s*is\s*better)\b/i,
+  solution:
+    /\b(low[\s-]?e|laminat|tempered|double[\s-]?glaz|triple[\s-]?glaz|casement|sliding|upvc|aluminium|aluminum|tinted|grille|contractor|installer|warranty|permit|hdb\s*permit|bca|application|approval|quote|quotation|cost|price|estimate|installation|sound[\s-]?proof|insulat|sealant|silicone|caulk(ing)?)\b/i,
+};
+
+/**
  * SG window-vertical pain clusters. Each cluster is matched with a regex over comment text.
  * Tune these per-client; the names match the Report.painPoints labels in /src/data/sample.ts.
  */

@@ -10,12 +10,19 @@ import { parse as parseYaml } from "yaml";
 import type { RawComment, ScrapeRun } from "./types";
 import { extractPhrases, type ExtractConfig } from "./nlp/extract-phrases";
 import { clusterPains, type ClusteredPain } from "./nlp/cluster-pains";
-import { windowSgClusters } from "./nlp/clusters/window-sg";
-import { skincareSgClusters } from "./nlp/clusters/skincare-sg";
+import { windowSgClusters, windowSgStageMatchers } from "./nlp/clusters/window-sg";
+import { skincareSgClusters, skincareSgStageMatchers } from "./nlp/clusters/skincare-sg";
+
+type StageMatchers = { problem: RegExp; brand: RegExp; solution: RegExp };
 
 const CLUSTERS_BY_VERTICAL: Record<string, typeof windowSgClusters> = {
   "window-sg": windowSgClusters,
   "skincare-sg": skincareSgClusters,
+};
+
+const STAGE_MATCHERS_BY_VERTICAL: Record<string, StageMatchers> = {
+  "window-sg": windowSgStageMatchers,
+  "skincare-sg": skincareSgStageMatchers,
 };
 
 type Config = {
@@ -97,18 +104,34 @@ function isNoise(text: string): boolean {
   return NOISE_PATTERNS.some((re) => re.test(text));
 }
 
-function pickTopKeywords(phrases: { text: string; count: number }[], topN = 30) {
+function pickTopKeywords(
+  phrases: { text: string; count: number }[],
+  stageMatchers: StageMatchers,
+  topN = 30
+) {
   return phrases
     .filter((p) => !isNoise(p.text))
     .slice(0, topN)
     .map((p) => ({
       phrase: p.text,
       monthlyVolume: p.count, // mention count, not Google volume — schema-compatible
-      stage: classifyStage(p.text),
+      stage: classifyStage(p.text, stageMatchers),
     }));
 }
 
-function classifyStage(text: string): "problem" | "solution" | "brand" {
+function classifyStage(
+  text: string,
+  m: StageMatchers
+): "problem" | "solution" | "brand" {
+  const t = text.toLowerCase();
+  if (m.problem.test(t)) return "problem";
+  if (m.brand.test(t)) return "brand";
+  if (m.solution.test(t)) return "solution";
+  return "solution"; // default — bare-noun phrases
+}
+
+// Legacy fallback (kept for reference; no longer called)
+function _classifyStageWindowLegacy(text: string): "problem" | "solution" | "brand" {
   const t = text.toLowerCase();
   // Problem-stage: pain language — the customer is describing what hurts
   if (
@@ -202,7 +225,7 @@ async function main() {
       citations: p.citations,
       sentiment: p.sentiment,
     })),
-    keywords: pickTopKeywords(phrases),
+    keywords: pickTopKeywords(phrases, STAGE_MATCHERS_BY_VERTICAL[clustersKey] ?? windowSgStageMatchers),
     angles: [], // angles need human curation; left empty until human pass
     competitors: [],
     copyHooks: [],

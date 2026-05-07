@@ -642,7 +642,7 @@
     {
       "phrase": "cystic acne",
       "monthlyVolume": 147,
-      "stage": "solution"
+      "stage": "problem"
     },
     {
       "phrase": "white cast",
@@ -657,7 +657,7 @@
     {
       "phrase": "hormonal acne",
       "monthlyVolume": 78,
-      "stage": "solution"
+      "stage": "problem"
     },
     {
       "phrase": "been using",
@@ -677,7 +677,7 @@
     {
       "phrase": "sensitive skin.",
       "monthlyVolume": 64,
-      "stage": "solution"
+      "stage": "problem"
     },
     {
       "phrase": "hyaluronic acid",
