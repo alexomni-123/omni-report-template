@@ -8,6 +8,8 @@ import { Section5Competitors } from "@/components/sections/Section5Competitors";
 import { Section6Angles } from "@/components/sections/Section6Angles";
 import { Section7CopyHooks } from "@/components/sections/Section7CopyHooks";
 import { Section8TestPlan } from "@/components/sections/Section8TestPlan";
+import { Section9NextActions } from "@/components/sections/Section9NextActions";
+import { DataQualityTable } from "@/components/DataQualityTable";
 
 export default function Home() {
   const r = report;
@@ -52,6 +54,11 @@ export default function Home() {
         <Section6Angles angles={r.angles} />
         <Section7CopyHooks hooks={r.copyHooks} angles={r.angles} />
         <Section8TestPlan plan={r.testPlan} />
+        <Section9NextActions />
+      </div>
+
+      <div className="mt-12">
+        <DataQualityTable />
       </div>
 
       <footer className="mt-16 pt-6 border-t border-[color:var(--card-border)] text-xs font-mono text-[color:var(--muted)] flex flex-wrap gap-x-4 gap-y-1 justify-between">
