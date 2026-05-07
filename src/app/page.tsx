@@ -47,7 +47,7 @@ export default function Home() {
 
       <div className="space-y-6">
         <Section1Snapshot snapshot={r.snapshot} />
-        <Section2ICP icp={r.icp} />
+        <Section2ICP icp={r.icp} icpInferred={r.icpInferred} />
         <Section3PainPoints painPoints={r.painPoints} />
         <Section4Keywords keywords={r.keywords} googleSuggest={r.googleSuggest} />
         <Section5Competitors competitors={r.competitors} gap={r.competitorGap} />

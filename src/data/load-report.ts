@@ -2,6 +2,7 @@ import type { Report, PainPoint } from "@/lib/types";
 import { sampleReport } from "./sample";
 import scraped from "./scraped/window-sg.json";
 import suggestRaw from "./scraped/window-sg-suggest.json";
+import icpInferred from "./scraped/window-sg-icp.json";
 import {
   synthesizedAngles,
   synthesizedCompetitorGap,
@@ -47,7 +48,25 @@ export const report = {
   isSynthesized: true,
   sourceTotals: real.sourceTotals ?? {},
   snapshot: synthesizedSnapshot,
-  icp: { ...sampleReport.icp, oneLine: synthesizedICPOneLine },
+  icp: {
+    ...sampleReport.icp,
+    oneLine: synthesizedICPOneLine,
+    homeTypes:
+      icpInferred.homeTypes && icpInferred.homeTypes.length > 0
+        ? icpInferred.homeTypes.map((h: { label: string; share: number }) => ({
+            label: h.label,
+            share: h.share,
+          }))
+        : sampleReport.icp.homeTypes,
+    urgency:
+      icpInferred.urgency && icpInferred.urgency.length > 0
+        ? icpInferred.urgency.map((u: { label: string; share: number }) => ({
+            stage: u.label,
+            share: u.share,
+          }))
+        : sampleReport.icp.urgency,
+  },
+  icpInferred,
   painPoints,
   keywords: isReal && real.keywords?.length ? real.keywords : sampleReport.keywords,
   // Synthesis layer always wins for narrative outputs (when present)

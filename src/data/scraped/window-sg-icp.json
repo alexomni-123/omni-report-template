@@ -1,0 +1,123 @@
+{
+  "generatedAt": "2026-05-07",
+  "corpusSize": 1599,
+  "note": "Inferred from language markers in the scraped corpus, not census. Markers are loose proxies for life stage / home type / urgency. Validate against client-side data (Meta Ads Library audience inference, GA4) before finalizing.",
+  "homeTypes": [
+    {
+      "id": "hdb_4r",
+      "label": "HDB 4-room",
+      "count": 8,
+      "share": 20
+    },
+    {
+      "id": "hdb_5r",
+      "label": "HDB 5-room / executive",
+      "count": 2,
+      "share": 5
+    },
+    {
+      "id": "hdb_3r",
+      "label": "HDB 3-room / smaller",
+      "count": 4,
+      "share": 10
+    },
+    {
+      "id": "condo",
+      "label": "Condo / private apartment",
+      "count": 22,
+      "share": 54
+    },
+    {
+      "id": "landed",
+      "label": "Landed (terrace / semi-D / bungalow)",
+      "count": 5,
+      "share": 12
+    }
+  ],
+  "lifeStages": [
+    {
+      "id": "newlyweds",
+      "label": "Newlyweds / BTO first-timers (28–38)",
+      "count": 10,
+      "share": 23
+    },
+    {
+      "id": "young_family",
+      "label": "Young family with kids (32–45)",
+      "count": 16,
+      "share": 37
+    },
+    {
+      "id": "established_family",
+      "label": "Established family (40–55)",
+      "count": 4,
+      "share": 9
+    },
+    {
+      "id": "empty_nesters",
+      "label": "Empty nesters (50–65)",
+      "count": 4,
+      "share": 9
+    },
+    {
+      "id": "elderly",
+      "label": "Elderly / multigen (60+)",
+      "count": 9,
+      "share": 21
+    }
+  ],
+  "urgency": [
+    {
+      "id": "problem_aware",
+      "label": "Problem-aware",
+      "count": 53,
+      "share": 62
+    },
+    {
+      "id": "solution_aware",
+      "label": "Solution-aware",
+      "count": 11,
+      "share": 13
+    },
+    {
+      "id": "ready_to_quote",
+      "label": "Ready-to-quote",
+      "count": 22,
+      "share": 26
+    }
+  ],
+  "geo": [
+    {
+      "town": "Toa Payoh",
+      "count": 2
+    },
+    {
+      "town": "Clementi",
+      "count": 2
+    },
+    {
+      "town": "Bedok",
+      "count": 2
+    },
+    {
+      "town": "Punggol",
+      "count": 2
+    },
+    {
+      "town": "Tampines",
+      "count": 2
+    },
+    {
+      "town": "Serangoon",
+      "count": 2
+    },
+    {
+      "town": "Jurong East",
+      "count": 2
+    },
+    {
+      "town": "Woodlands",
+      "count": 2
+    }
+  ]
+}
