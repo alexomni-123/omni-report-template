@@ -3,6 +3,7 @@
   "generatedBy": "OMNI BRAIN Oracle (real-data scrape)",
   "isRealData": true,
   "sourceTotals": {
+    "renotalk": 140,
     "reddit": 1452
   },
   "snapshot": {
@@ -22,32 +23,32 @@
         "client": 0,
         "reviews": 0,
         "reddit": 185,
-        "forums": 0
+        "forums": 7
       },
       "topPhrases": [
+        {
+          "text": "air con",
+          "count": 21
+        },
         {
           "text": "the aircon",
           "count": 21
         },
         {
-          "text": "air con",
-          "count": 20
+          "text": "air con,",
+          "count": 12
         },
         {
           "text": "without aircon",
           "count": 10
         },
         {
-          "text": "electricity bill",
+          "text": "casement aircon",
           "count": 9
         },
         {
-          "text": "air con,",
-          "count": 8
-        },
-        {
-          "text": "casement aircon",
-          "count": 8
+          "text": "electricity bill",
+          "count": 9
         },
         {
           "text": "my aircon",
@@ -84,28 +85,44 @@
     {
       "id": "seepage",
       "label": "Monsoon water seepage at frame / sill",
-      "intensity": 78,
+      "intensity": 82,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 58,
-        "forums": 0
+        "forums": 16
       },
       "topPhrases": [
         {
           "text": "water seepage",
-          "count": 26
+          "count": 30
+        },
+        {
+          "text": "the leak",
+          "count": 7
         },
         {
           "text": "seepage from",
           "count": 5
         },
         {
-          "text": "water seepage from",
+          "text": "the seepage",
+          "count": 4
+        },
+        {
+          "text": "water leaking",
+          "count": 4
+        },
+        {
+          "text": "silicone sealants",
+          "count": 4
+        },
+        {
+          "text": "ceiling leaking.",
           "count": 3
         },
         {
-          "text": "a leak",
+          "text": "leaking from",
           "count": 3
         }
       ],
@@ -135,14 +152,22 @@
     {
       "id": "mold",
       "label": "Humidity + mold around frames",
-      "intensity": 66,
+      "intensity": 72,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 31,
-        "forums": 0
+        "forums": 12
       },
       "topPhrases": [
+        {
+          "text": "a dehumidifier",
+          "count": 3
+        },
+        {
+          "text": "reducing humidity",
+          "count": 3
+        },
         {
           "text": "the humidity",
           "count": 3
@@ -174,12 +199,12 @@
     {
       "id": "noise",
       "label": "MRT / road / aircon-compressor noise",
-      "intensity": 64,
+      "intensity": 66,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 27,
-        "forums": 0
+        "forums": 4
       },
       "topPhrases": [
         {
@@ -213,12 +238,12 @@
     {
       "id": "disruption",
       "label": "Mess + disruption (kids, elderly, WFH)",
-      "intensity": 52,
+      "intensity": 55,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 14,
-        "forums": 0
+        "forums": 3
       },
       "topPhrases": [],
       "citations": [
@@ -281,35 +306,65 @@
     {
       "id": "hdb-approval",
       "label": "HDB approval / BCA paperwork anxiety",
-      "intensity": 0,
+      "intensity": 13,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 0,
-        "forums": 0
+        "forums": 1
       },
       "topPhrases": [],
-      "citations": []
+      "citations": [
+        {
+          "url": "https://www.renotalk.com/forum/topic/88489-unable-to-change-window-grill/#elComment_989628",
+          "snippet": "FYI, PE is Professional Engineer. which part of the grille you want to change? top or bottom of both? the top part seems to be just screwed onto the beam and walls so changing that should not be a pro…"
+        }
+      ]
     },
     {
       "id": "cost",
       "label": "Hidden cost / opaque quotes (debris, hoist, GST)",
-      "intensity": 0,
+      "intensity": 13,
       "sources": {
         "client": 0,
         "reviews": 0,
         "reddit": 0,
-        "forums": 0
+        "forums": 1
       },
       "topPhrases": [],
-      "citations": []
+      "citations": [
+        {
+          "url": "https://www.renotalk.com/forum/topic/37075-buying-own-materials-and-engaging-contractor-to-supply-labour-and-project-management/#elComment_600277",
+          "snippet": "Thanks gimz, by the way, roughly how much was this \"fair bit\" that you saved? This could help me decide whether its worth my effort or not. hahaa ok...do note the below is for reference only ah... i c…"
+        }
+      ]
     }
   ],
   "keywords": [
     {
       "phrase": "water seepage",
-      "monthlyVolume": 26,
+      "monthlyVolume": 30,
       "stage": "problem"
+    },
+    {
+      "phrase": "aluminium louver doors",
+      "monthlyVolume": 24,
+      "stage": "solution"
+    },
+    {
+      "phrase": "air con",
+      "monthlyVolume": 21,
+      "stage": "solution"
+    },
+    {
+      "phrase": "aluminum cabinets",
+      "monthlyVolume": 21,
+      "stage": "solution"
+    },
+    {
+      "phrase": "louver doors",
+      "monthlyVolume": 21,
+      "stage": "solution"
     },
     {
       "phrase": "noise pollution",
@@ -317,14 +372,74 @@
       "stage": "problem"
     },
     {
-      "phrase": "air con",
+      "phrase": "town council",
       "monthlyVolume": 20,
+      "stage": "solution"
+    },
+    {
+      "phrase": "aluminium louver",
+      "monthlyVolume": 19,
+      "stage": "solution"
+    },
+    {
+      "phrase": "air conditioner",
+      "monthlyVolume": 16,
+      "stage": "solution"
+    },
+    {
+      "phrase": "security doors",
+      "monthlyVolume": 14,
+      "stage": "solution"
+    },
+    {
+      "phrase": "renovation company",
+      "monthlyVolume": 13,
+      "stage": "solution"
+    },
+    {
+      "phrase": "wooden cabinets",
+      "monthlyVolume": 13,
       "stage": "solution"
     },
     {
       "phrase": "mrt track",
       "monthlyVolume": 13,
       "stage": "solution"
+    },
+    {
+      "phrase": "air con,",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "casement windows",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "first time",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "window grille",
+      "monthlyVolume": 12,
+      "stage": "solution"
+    },
+    {
+      "phrase": "sounds like",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "toilet doors",
+      "monthlyVolume": 11,
+      "stage": "solution"
+    },
+    {
+      "phrase": "loud noise",
+      "monthlyVolume": 11,
+      "stage": "problem"
     },
     {
       "phrase": "even though",
@@ -337,7 +452,12 @@
       "stage": "solution"
     },
     {
-      "phrase": "casement windows",
+      "phrase": "years ago",
+      "monthlyVolume": 10,
+      "stage": "solution"
+    },
+    {
+      "phrase": "few days",
       "monthlyVolume": 10,
       "stage": "solution"
     },
@@ -362,98 +482,13 @@
       "stage": "solution"
     },
     {
-      "phrase": "sounds like",
+      "phrase": "noise level",
       "monthlyVolume": 9,
       "stage": "solution"
     },
     {
-      "phrase": "double decker buses",
+      "phrase": "worry about",
       "monthlyVolume": 9,
-      "stage": "solution"
-    },
-    {
-      "phrase": "singapore bus service",
-      "monthlyVolume": 9,
-      "stage": "solution"
-    },
-    {
-      "phrase": "electricity bill",
-      "monthlyVolume": 9,
-      "stage": "problem"
-    },
-    {
-      "phrase": "noise cancelling",
-      "monthlyVolume": 9,
-      "stage": "solution"
-    },
-    {
-      "phrase": "loud noise",
-      "monthlyVolume": 9,
-      "stage": "problem"
-    },
-    {
-      "phrase": "looks like",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "first time",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "outside window",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "too much",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "feels like",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "close window",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "air con,",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "town council",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "years ago",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "near expressway",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "4th floor",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "noise barriers",
-      "monthlyVolume": 8,
-      "stage": "solution"
-    },
-    {
-      "phrase": "advertisement &gt;",
-      "monthlyVolume": 8,
       "stage": "solution"
     }
   ],
