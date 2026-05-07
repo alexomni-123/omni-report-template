@@ -11,12 +11,19 @@ import type { RawComment, ScrapeRun } from "./types";
 import { extractPhrases, type ExtractConfig } from "./nlp/extract-phrases";
 import { clusterPains, type ClusteredPain } from "./nlp/cluster-pains";
 import { windowSgClusters } from "./nlp/clusters/window-sg";
+import { skincareSgClusters } from "./nlp/clusters/skincare-sg";
+
+const CLUSTERS_BY_VERTICAL: Record<string, typeof windowSgClusters> = {
+  "window-sg": windowSgClusters,
+  "skincare-sg": skincareSgClusters,
+};
 
 type Config = {
   clientName: string;
   clientWebsite: string;
   serviceArea: string;
   vertical: string;
+  clustersKey?: string; // 'window-sg', 'skincare-sg', etc. — defaults to window-sg for backwards compat
   nlp: ExtractConfig;
   output: { reportPath: string; rawPath: string };
 };
@@ -159,7 +166,14 @@ async function main() {
   const phrases = extractPhrases(comments, cfg.nlp);
   console.log(`build-report: ${phrases.length} candidate phrases (occ ≥ ${cfg.nlp.minOccurrences})`);
 
-  const pains = clusterPains(phrases, comments, windowSgClusters);
+  const clustersKey = cfg.clustersKey ?? "window-sg";
+  const clusters = CLUSTERS_BY_VERTICAL[clustersKey];
+  if (!clusters) {
+    console.error(`! unknown clustersKey "${clustersKey}". Available: ${Object.keys(CLUSTERS_BY_VERTICAL).join(", ")}`);
+    process.exit(1);
+  }
+  console.log(`build-report: clustering with "${clustersKey}" (${clusters.length} clusters)`);
+  const pains = clusterPains(phrases, comments, clusters);
 
   // Citation count summary by source
   const sourceTotals = comments.reduce<Record<string, number>>((acc, c) => {

@@ -1,0 +1,91 @@
+# Worked example: a DTC skincare brand targeting 18–32yo SG/SEA customers
+# with sensitive / acne-prone skin. Demonstrates that this pipeline runs on
+# verticals beyond the original SG-window worked example.
+
+clientName: "Sample SG Skincare DTC Brand"
+clientWebsite: "https://example-skincare.sg"
+serviceArea: "Singapore + Malaysia (e-commerce, SG-warehoused)"
+vertical: "DTC Skincare for Sensitive / Acne-prone Skin"
+clustersKey: "skincare-sg"
+
+reddit:
+  subreddits:
+    - SkincareAddictionAsia
+    - AsianBeauty
+    - SkincareAddiction
+    - 30PlusSkinCare
+  queries:
+    - "tropical humidity skincare"
+    - "sensitive skin reaction"
+    - "cystic acne adult"
+    - "niacinamide vs retinol"
+    - "spf white cast asian skin"
+    - "skincare overwhelmed beginner"
+    - "kbeauty dupes"
+    - "hyperpigmentation acne scar"
+  maxPostsPerQuery: 6
+  commentDepth: 2
+
+# Forums: skincare community is mostly Reddit + IG, not SG renovation forums.
+# Leaving HWZ + Renotalk empty for this vertical.
+forums:
+  hardwarezone: { base: "", queries: [], maxPostsPerQuery: 0 }
+  renotalk: { base: "", queries: [], maxPostsPerQuery: 0 }
+
+googleMaps:
+  businesses: []
+  reviewsPerBusiness: 0
+
+# Carousell + Lemon8 + Xiaohongshu have skincare community presence.
+# Using Carousell scraper (already coded) for SG buyer/seller listings + Q&A.
+carousell:
+  searchTerms:
+    - "skincare bundle"
+    - "sensitive skin moisturizer"
+    - "korean serum"
+  maxListings: 20
+
+nlp:
+  minPhraseLength: 2
+  maxPhraseLength: 5
+  minOccurrences: 3
+  stopwords:
+    - the
+    - and
+    - for
+    - with
+    - this
+    - that
+    - have
+    - was
+    - just
+    - but
+    - not
+    - all
+    - get
+    - can
+    - one
+    - really
+    - some
+    - very
+    - you
+    - your
+    - are
+    - they
+    - their
+    - them
+    - has
+    - had
+    - will
+    - what
+    - when
+    - where
+    - why
+    - how
+    - skin
+    - face
+    - product
+
+output:
+  reportPath: "../src/data/scraped/skincare-sg.json"
+  rawPath: "./output/raw-skincare/"
